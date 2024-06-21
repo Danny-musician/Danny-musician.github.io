@@ -42,7 +42,6 @@
       /* You can also specify other font formats like woff, woff2 for better browser compatibility */
     }
 
-
     body {
       font-family: 'Playfair Display', serif;
       background-color: rgb(255, 255, 255);
@@ -55,15 +54,17 @@
     h1.logo {
       margin-top: 70px;
       /* Add space above the logo */
-      margin-left: 50px;
-      /* Add space on the left */
-      margin-right: 50px;
-      /* Add space on the right */
       font-family: 'Espoir', Arial, sans-serif;
       font-weight: 300;
       /* Use a lighter font weight */
       font-size: 100px;
       /* Adjust font size as needed */
+      vertical-align: middle;
+      text-align: center;
+      /* Center align text horizontally */
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .versatile-singer {
@@ -240,7 +241,7 @@
 
       <h1 class="logo">
         <a title="Pineapple" href="#">
-          Junchuan, <span class="versatile-singer">Versatile Singer</span> and
+          Junchuan, <span class="versatile-singer">Versatile Singer</span> &
         </a>
         <a class="ai-researcher" href="https://danny-nus.github.io/" target="_blank" title="AI Researcher">AI
           Researcher</a>
