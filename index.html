@@ -76,6 +76,23 @@
       transition: color 0.3s, text-shadow 0.3s;
     }
 
+    .reflect {
+      position: absolute;
+      bottom: -0.5em;
+      /* Adjust the position for best visual effect */
+      right: -0.5em;
+      /* Adjust the position for best visual effect */
+      transform: rotate(-10deg) scaleX(1.2);
+      /* Rotate and scale the reflection */
+      transform-origin: bottom right;
+      /* Set the transformation origin */
+      opacity: 0.5;
+      /* Adjust the opacity of the reflection */
+      transition: opacity 0.3s, transform 0.3s;
+      pointer-events: none;
+      /* Ensure the reflection doesn't interfere with link clicks */
+    }
+
     .versatile-singer:hover {
       color: #4b7f85;
       /* Hover color */
@@ -90,6 +107,12 @@
       /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); */
       text-shadow: 2px 2px 0 #aaa, 4px 4px 0 #888, 6px 6px 0 #666;
       /* Bottom-right shadow */
+    }
+
+    .versatile-singer:hover .reflect,
+    .ai-researcher:hover .reflect {
+      opacity: 0.5;
+      /* Show reflection on hover */
     }
 
     @media all and (max-width: 768px) {
