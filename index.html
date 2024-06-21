@@ -48,6 +48,20 @@
       } */
     }
 
+    /* Fixed position for navigation */
+    #fixed-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #cbc3e2;
+      /* Set background color */
+      z-index: 1000;
+      /* Ensure it's above other content */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      /* Optional: Add shadow for better visibility */
+    }
+
     .junchuan {
       font-family: 'BOSCH', serif;
       font-size: 30px;
@@ -335,7 +349,12 @@
 <body>
   <header class="header">
     <div class="container">
-      <a href="https://danny-nus.github.io/" class="junchuan">Junchuan</a>
+      <nav id="fixed-nav">
+        <ul>
+          <li><a href="https://danny-nus.github.io/" class="junchuan">Junchuan</a></li>
+        </ul>
+      </nav>
+      <!-- <a href="https://danny-nus.github.io/" class="junchuan">Junchuan</a> -->
       <!-- <button class="btn" id="flowerButton">
         <div class="wrapper">
           <div class="flower flower1">
