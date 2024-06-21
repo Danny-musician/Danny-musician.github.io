@@ -28,9 +28,10 @@
     }
 
     @font-face {
-      font-family: 'GinebraFont';
+      font-family: 'ClearLight';
       /* Name to refer to your font */
-      src: url('ginebra_font.ttf') format('truetype');
+      src: url('clearlight.regular.ttf.ttf') format('truetype');
+      font-weight: normal;
       /* Path to your font file */
       /* You can also specify other font formats like woff, woff2 for better browser compatibility */
     }
@@ -46,8 +47,8 @@
     }
 
     h1.logo {
-      margin-bottom: 10px;
-      font-family: 'GinebraFont', Arial, sans-serif;
+      margin-top: 50px;
+      font-family: 'ClearLight', Arial, sans-serif;
       /* Adjust the margin-bottom as needed */
       background-color: #e6e0f6;
     }
@@ -57,10 +58,13 @@
         padding-top: 20px;
         font-size: 5rem;
       }
+    }
 
-      /* .btn {
-        justify-content: center;
-      } */
+    #container_h {
+      background-color: #e6e0f6;
+      /* Set background color to light purple */
+      padding: 20px;
+      /* Optional: Add padding to create space inside the container */
     }
 
     #fixed-nav {
@@ -383,7 +387,7 @@
 
 <body>
   <header class="header">
-    <div class="container">
+    <div class="container" id="container_h">
       <nav id="fixed-nav">
         <ul>
           <li><a href="https://danny-nus.github.io/" class="junchuan">Junchuan</a></li>
