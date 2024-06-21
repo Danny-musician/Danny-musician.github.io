@@ -28,7 +28,11 @@
     }
 
 
-    body,
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #20212b;
+    }
+
     h3 {
       font-family: 'Playfair Display', serif;
     }
@@ -39,12 +43,26 @@
         font-size: 5rem;
       }
 
-      .btn {
+      /* .btn {
         justify-content: center;
-      }
+      } */
     }
 
-    .btn {
+    .junchuan {
+      font-family: 'BOSCH', serif;
+      font-size: 30px;
+      color: black;
+      transition: color 0.3s ease, font-size 0.3s ease;
+    }
+
+    .junchuan:hover {
+      color: #7f77b8;
+      /* Changes text color to purple on hover */
+      font-size: 36px;
+      /* Increases font size on hover */
+    }
+
+    /* .btn {
       height: 10em;
       width: 28em;
       display: flex;
@@ -240,7 +258,7 @@
       100% {
         transform: rotate(390deg);
       }
-    }
+    } */
 
 
     .button2 {
@@ -317,8 +335,8 @@
 <body>
   <header class="header">
     <div class="container">
-      <!-- <a href="https://danny-nus.github.io/" class="large-font">Junchuan</a> -->
-      <button class="btn" id="flowerButton">
+      <a href="https://danny-nus.github.io/" class="junchuan">Junchuan</a>
+      <!-- <button class="btn" id="flowerButton">
         <div class="wrapper">
           <div class="flower flower1">
             <div class="petal one"></div>
@@ -358,7 +376,7 @@
           </div>
           <div class="text">Junchuan</div>
         </div>
-      </button>
+      </button> -->
       <h1 class="logo">
         <a title="Pineapple" href="#">Junchuan, Versatile Singer and AI Researcher</a>
       </h1>
