@@ -48,32 +48,45 @@
       } */
     }
 
-    /* Fixed position for navigation */
+    /* CSS for the fixed navigation bar */
     #fixed-nav {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       background-color: #cbc3e2;
-      /* Set background color */
       z-index: 1000;
-      /* Ensure it's above other content */
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      /* Optional: Add shadow for better visibility */
+    }
+
+    /* CSS for the navigation links */
+    #fixed-nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+    }
+
+    #fixed-nav ul li {
+      display: inline;
+      margin-left: 20px;
+      /* Adjust spacing between links */
     }
 
     .junchuan {
       font-family: 'BOSCH', serif;
       font-size: 30px;
       color: black;
+      text-decoration: none;
+      /* Remove underline from links */
       transition: color 0.3s ease, font-size 0.3s ease;
     }
 
     .junchuan:hover {
       color: #7f77b8;
-      /* Changes text color to purple on hover */
+      /* Purple color on hover */
       font-size: 36px;
-      /* Increases font size on hover */
+      /* Larger font size on hover */
     }
 
     /* .btn {
