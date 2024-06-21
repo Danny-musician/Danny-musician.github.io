@@ -542,6 +542,16 @@
       window.location.href = 'https://danny-nus.github.io/';
     });
   </script>
+  <script>
+    window.addEventListener('scroll', function () {
+      var nav = document.getElementById('fixed-nav');
+      if (window.scrollY > 0) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 
 </html>
