@@ -68,39 +68,24 @@
 
     .versatile-singer {
       color: #5ca0a8;
-      transition: color 0.3s;
+      transition: color 0.3s, text-shadow 0.3s;
     }
 
     .ai-researcher {
       color: #9b91c7;
-      transition: color 0.3s;
+      transition: color 0.3s, text-shadow 0.3s;
     }
 
-    .reflect {
-      position: absolute;
-      bottom: -0.5em;
-      right: -0.5em;
-      transform: rotate(-10deg) scaleX(1.2);
-      transform-origin: bottom right;
-      opacity: 0;
-      transition: opacity 0.3s, transform 0.3s;
-      pointer-events: none;
-    }
-
-    .versatile-singer:hover,
-    .ai-researcher:hover {
+    .versatile-singer:hover {
       color: #4b7f85;
       /* Default hover color for both */
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     }
 
     .ai-researcher:hover {
       color: #7a6ea1;
       /* Specific hover color for .ai-researcher */
-    }
-
-    .versatile-singer:hover .reflect,
-    .ai-researcher:hover .reflect {
-      opacity: 0.5;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     }
 
     @media all and (max-width: 768px) {
