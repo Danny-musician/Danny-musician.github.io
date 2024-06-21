@@ -80,20 +80,20 @@
       width: 100%;
       height: 60px;
       /* Fixed height of the navigation bar */
-      background-color: rgba(230, 224, 246, 0.7);
+      background-color: rgb(255, 255, 255);
       z-index: 1000;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
       display: flex;
       /* Use flexbox for vertical alignment */
       align-items: center;
       /* Center items vertically */
-      transition: background-color 0.3s ease;
+      transition: box-shadow 0.3s ease;
       /* Smooth transition */
     }
 
     /* Style when the nav bar is scrolled */
     #fixed-nav.scrolled {
-      background-color: rgba(255, 255, 255, 1);
+      box-shadow: 0 2px 5px rgba(255, 255, 255);
       /* Pure white background */
     }
 
