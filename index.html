@@ -452,10 +452,6 @@
           </li>
           <li></li>
           <li>
-
-
-
-
             <a href="https://youtu.be/5dhDzMNkP0U" data-sr-id="1" style="
 				          visibility: visible;
 				          -webkit-transform: translateY(0) scale(1);
@@ -583,7 +579,7 @@
   </footer>
   <script src="./style/scrollreveal.min.js"></script>
   <script src="./style/home.js"></script>
-  <script>
+  <!-- <script>
     document.getElementById('show-more').addEventListener('click', function (event) {
       event.preventDefault();
       var fullText = document.querySelector('.full-text');
@@ -593,6 +589,21 @@
       } else {
         fullText.style.display = 'none';
         this.textContent = 'MORE';
+      }
+    });
+  </script> -->
+  <script>
+    document.getElementById('show-more').addEventListener('click', function (event) {
+      event.preventDefault();
+      var fullText = document.querySelector('.full-text');
+
+      // Toggle visibility of full-text
+      if (fullText.style.display === 'none' || fullText.style.display === '') {
+        fullText.style.display = 'block'; // Show full text
+        this.textContent = 'HIDE'; // Change button text to 'HIDE'
+      } else {
+        fullText.style.display = 'none'; // Hide full text
+        this.textContent = 'MORE'; // Change button text back to 'MORE'
       }
     });
   </script>
