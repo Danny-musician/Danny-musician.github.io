@@ -334,6 +334,31 @@
         margin-right: 10%;
       }
     }
+
+    .video-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
+    .video-wrapper img {
+      width: 100%;
+    }
+
+    .video-wrapper video,
+    .video-wrapper .gif {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .video-wrapper:hover video,
+    .video-wrapper:hover .gif {
+      display: block;
+    }
   </style>
 
 </head>
@@ -430,7 +455,7 @@
         <h2>Live Performance</h2>
         <ul class="projects-list">
           <li>
-            <a href="https://www.youtube.com/watch?v=DkPxZTfZkOk&list=PLIT5TPmY3gWzBzpTeQaR5JCxUuoMyQVCV&index=16"
+            <!-- <a href="https://www.youtube.com/watch?v=DkPxZTfZkOk&list=PLIT5TPmY3gWzBzpTeQaR5JCxUuoMyQVCV&index=16"
               data-sr-id="1" style="
                   visibility: visible;
                   -webkit-transform: translateY(0) scale(1);
@@ -446,6 +471,30 @@
                 ">
               <div class="img-wrapper">
                 <img src="./img/1.jpg" alt="Red Pineapple" />
+              </div>
+              <span class="h2"></span>
+              <h3>Stormy Weather | On Bali Lane 2022</h3>
+            </a> -->
+            <a href="https://www.youtube.com/watch?v=DkPxZTfZkOk&list=PLIT5TPmY3gWzBzpTeQaR5JCxUuoMyQVCV&index=16"
+              data-sr-id="1" style="
+                visibility: visible;
+                -webkit-transform: translateY(0) scale(1);
+                opacity: 1;
+                transform: translateY(0) scale(1);
+                opacity: 1;
+                -webkit-transition:
+                  -webkit-transform 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s,
+                  opacity 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+                transition:
+                  transform 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s,
+                  opacity 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+              ">
+              <div class="video-wrapper">
+                <img src="./img/1.jpg" alt="Red Pineapple" />
+                <!-- Replace the source with your video URL -->
+                <video src="1.mov" autoplay muted loop></video>
+                <!-- Or replace with a GIF URL -->
+                <!-- <img src="your-gif-url.gif" class="gif" alt="GIF"/> -->
               </div>
               <span class="h2"></span>
               <h3>Stormy Weather | On Bali Lane 2022</h3>
