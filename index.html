@@ -94,6 +94,19 @@
       /* large enough to accommodate the full content */
     }
 
+    .full-text a {
+      color: #4b7f85;
+      font-weight: 300;
+      text-decoration: none;
+      /* optional, depending on if you want underline or not */
+    }
+
+    .full-text a:hover {
+      color: #7a6ea1;
+      font-weight: 700;
+      /* adjust if you want it bolder */
+    }
+
     h1.logo {
       margin-top: 70px;
       margin-left: 20px;
@@ -209,20 +222,22 @@
     .music-text {
       color: #5ca0a8;
       font-weight: 300 !important;
-      transition: font-weight 0.3s ease;
+      transition: color 0.3s ease, font-weight 0.3s ease;
     }
 
     .place-text {
       color: #9b91c7;
       font-weight: 300 !important;
-      transition: font-weight 0.3s ease;
+      transition: color 0.3s ease, font-weight 0.3s ease;
     }
 
     .music-text:hover {
+      color: #467d84;
       font-weight: 800;
     }
 
     .place-text:hover {
+      color: #7a6fb1;
       font-weight: 800;
     }
 
