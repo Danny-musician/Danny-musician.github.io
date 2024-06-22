@@ -70,6 +70,8 @@
       text-align: justify;
       padding-left: 20%;
       padding-right: 20%;
+      transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
+      overflow: hidden;
     }
 
     .full-text {
@@ -80,6 +82,16 @@
       text-align: justify;
       padding-left: 20%;
       padding-right: 20%;
+      transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
+      overflow: hidden;
+      opacity: 0;
+      max-height: 0;
+    }
+
+    .full-text.show {
+      opacity: 1;
+      max-height: 1000px;
+      /* large enough to accommodate the full content */
     }
 
     h1.logo {
@@ -333,49 +345,6 @@
     <section class="intro">
       <div style="text-align: center;">
         <h2>Personal Bio</h2>
-        <!-- <p class="bio">
-          With over a decade of experience, I am a classically trained <span class="music-text">pianist and choir
-            singer</span>, as well as the former
-          choir <span class="music-text">conductor</span> for <span class="place-text">AiYue Chorus</span> at BUPT. My
-          musical journey also includes performing as a <span class="music-text">jazz and R&B vocalist</span> with the
-          <span class="place-text">NUS JazzBand (NJB)</span>.
-          <span class="full-text">
-            <br>
-            <br>
-            My musical journey began at the tender age of four when I started learning classical piano, a passion that I
-            pursued until I was 15. I was fortunate to study under the guidance of Mrs. Lü Zhen (吕真), an Associate
-            Professor of Piano at the School of Music, South China Normal University, and a Visiting Professor at the
-            Central Conservatory of Music. Her mentorship helped me build a solid foundation in classical music.
-            <br>
-            <br>
-            After my classical training, I ventured into the world of popular music by teaching myself pop piano
-            arrangements. This exploration opened my eyes to the vast possibilities within music. In 2018, I expanded my
-            repertoire by studying Chinese folk singing with Mrs. Zhang Xiuli (张秀丽), a graduate of the China
-            Conservatory of Music.
-            <br>
-            <br>
-            During my undergraduate studies at Beijing University of Posts and Telecommunications (BUPT), I joined the
-            AiYue Chorus as a conductor. I had the privilege of being guided by
-            <a href="https://sdmda.bupt.edu.cn/info/1075/1081.htm"> Mrs. Ma Menghe (马梦鹤)
-            </a>,
-            <a href="https://www.bupt.edu.cn/info/1079/71463.htm"> Mr. Li Hong (李闳)
-            </a>, and
-            <a href="https://baike.baidu.com/item/%E6%9D%8E%E5%8E%9A%E6%9C%B4/56262385"> Mr. Li Houpu (李厚朴)
-            </a>.
-            At the same time, I sang as a bass in the Beijing Queer Chorus (BQC), which enriched my vocal experience.
-            <br>
-            <br>
-            In recent years, my musical interests have gravitated towards R&B, Soul, and Jazz. This passion led me to
-            join the NUS Jazz Band as a vocalist, where I continually explore and perform these genres. Additionally, I
-            perform some of my favorite pieces at our lab's (SMC) annual concert, sharing my love for music with a
-            broader audience. Music has always been my way of communicating and expressing emotions. I relish the
-            freedom of singing and the joy it brings to both myself and my listeners.
-          </span>
-          <br>
-          <br>
-          <button href="#" id="show-more" class="button2">MORE</button>
-        </p> -->
-
         <p class="bio">
           With over a decade of experience, I am a classically trained <span class="music-text">pianist and choir
             singer</span>, as well as the former
@@ -661,16 +630,26 @@
       event.preventDefault();
       var bioParagraph = document.querySelector('.bio');
       var fullText = document.querySelector('.full-text');
-
-      if (fullText.style.display === 'none' || fullText.style.display === '') {
-        // Show full text
-        bioParagraph.style.display = 'none'; // Hide short bio
-        fullText.style.display = 'block'; // Show full text
+      // Toggle visibility with smooth transition
+      if (!fullText.classList.contains('show')) {
+        bioParagraph.style.opacity = '0';
+        setTimeout(function () {
+          bioParagraph.style.display = 'none';
+          fullText.style.display = 'block';
+          setTimeout(function () {
+            fullText.classList.add('show');
+          }, 10); // Small delay to trigger transition
+        }, 500); // Match with the CSS transition duration
         this.textContent = 'HIDE'; // Change button text to 'HIDE'
       } else {
-        // Hide full text and show short bio
-        bioParagraph.style.display = 'block'; // Show short bio
-        fullText.style.display = 'none'; // Hide full text
+        fullText.classList.remove('show');
+        setTimeout(function () {
+          fullText.style.display = 'none';
+          bioParagraph.style.display = 'block';
+          setTimeout(function () {
+            bioParagraph.style.opacity = '1';
+          }, 10); // Small delay to trigger transition
+        }, 500); // Match with the CSS transition duration
         this.textContent = 'MORE'; // Change button text back to 'MORE'
       }
     });
