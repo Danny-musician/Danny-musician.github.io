@@ -194,13 +194,13 @@
 
     .music-text {
       color: #5ca0a8;
-      font-weight: 500;
+      font-weight: 300 !important;
       transition: font-weight 0.3s ease;
     }
 
     .place-text {
       color: #9b91c7;
-      font-weight: 500;
+      font-weight: 300 !important;
       transition: font-weight 0.3s ease;
     }
 
@@ -312,7 +312,7 @@
     <section class="intro">
       <div style="text-align: center;">
         <h2>Personal Bio</h2>
-        <p class="bio">
+        <!-- <p class="bio">
           With over a decade of experience, I am a classically trained <span class="music-text">pianist and choir
             singer</span>, as well as the former
           choir <span class="music-text">conductor</span> for <span class="place-text">AiYue Chorus</span> at BUPT. My
@@ -353,7 +353,52 @@
           <br>
           <br>
           <button href="#" id="show-more" class="button2">MORE</button>
+        </p> -->
+
+        <p class="bio">
+          With over a decade of experience, I am a classically trained <span class="music-text">pianist and choir
+            singer</span>, as well as the former
+          choir <span class="music-text">conductor</span> for <span class="place-text">AiYue Chorus</span> at BUPT. My
+          musical journey also includes performing as a <span class="music-text">jazz and R&B vocalist</span> with the
+          <span class="place-text">NUS JazzBand (NJB)</span>.
         </p>
+
+        <div class="full-text" style="display: none;">
+          <!-- Additional text that will replace the initial text when shown -->
+          <br>
+          <br>
+          My musical journey began at the tender age of four when I started learning classical piano, a passion that I
+          pursued until I was 15. I was fortunate to study under the guidance of Mrs. Lü Zhen (吕真), an Associate
+          Professor of Piano at the School of Music, South China Normal University, and a Visiting Professor at the
+          Central Conservatory of Music. Her mentorship helped me build a solid foundation in classical music.
+          <br>
+          <br>
+          After my classical training, I ventured into the world of popular music by teaching myself pop piano
+          arrangements. This exploration opened my eyes to the vast possibilities within music. In 2018, I expanded my
+          repertoire by studying Chinese folk singing with Mrs. Zhang Xiuli (张秀丽), a graduate of the China
+          Conservatory of Music.
+          <br>
+          <br>
+          During my undergraduate studies at Beijing University of Posts and Telecommunications (BUPT), I joined the
+          AiYue Chorus as a conductor. I had the privilege of being guided by
+          <a href="https://sdmda.bupt.edu.cn/info/1075/1081.htm"> Mrs. Ma Menghe (马梦鹤)
+          </a>,
+          <a href="https://www.bupt.edu.cn/info/1079/71463.htm"> Mr. Li Hong (李闳)
+          </a>, and
+          <a href="https://baike.baidu.com/item/%E6%9D%8E%E5%8E%9A%E6%9C%B4/56262385"> Mr. Li Houpu (李厚朴)
+          </a>.
+          At the same time, I sang as a bass in the Beijing Queer Chorus (BQC), which enriched my vocal experience.
+          <br>
+          <br>
+          In recent years, my musical interests have gravitated towards R&B, Soul, and Jazz. This passion led me to
+          join the NUS Jazz Band as a vocalist, where I continually explore and perform these genres. Additionally, I
+          perform some of my favorite pieces at our lab's (SMC) annual concert, sharing my love for music with a
+          broader audience. Music has always been my way of communicating and expressing emotions. I relish the
+          freedom of singing and the joy it brings to both myself and my listeners.
+        </div>
+        <br>
+        <br>
+        <button href="#" id="show-more" class="button2">MORE</button>
       </div>
     </section>
     <section class="projects">
@@ -595,13 +640,17 @@
   <script>
     document.getElementById('show-more').addEventListener('click', function (event) {
       event.preventDefault();
+      var bioParagraph = document.querySelector('.bio');
       var fullText = document.querySelector('.full-text');
 
-      // Toggle visibility of full-text
       if (fullText.style.display === 'none' || fullText.style.display === '') {
+        // Show full text
+        bioParagraph.style.display = 'none'; // Hide short bio
         fullText.style.display = 'block'; // Show full text
         this.textContent = 'HIDE'; // Change button text to 'HIDE'
       } else {
+        // Hide full text and show short bio
+        bioParagraph.style.display = 'block'; // Show short bio
         fullText.style.display = 'none'; // Hide full text
         this.textContent = 'MORE'; // Change button text back to 'MORE'
       }
