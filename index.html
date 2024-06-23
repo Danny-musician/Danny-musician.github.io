@@ -43,6 +43,11 @@
       font-weight: normal;
     }
 
+    @font-face {
+      font-family: 'Chafuer';
+      src: url('Chafuer.otf') format('truetype');
+    }
+
     body {
       /* font-family: 'Playfair Display', serif; */
       font-family: 'Pathway Extreme', sans-serif;
@@ -397,8 +402,8 @@
       /* More space between words */
     }
 
-
     .audio_player {
+      text-align: center;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -692,6 +697,12 @@
 
     .button:hover i {
       color: #fff;
+    }
+
+    .audio-title {
+      font-family: 'Chafuer', sans-serif;
+      font-size: 40pt;
+      margin-bottom: 20px;
     }
   </style>
 
@@ -1068,6 +1079,7 @@
       </div>
     </section>
     <section class="audio_player">
+      <h1 class="audio-title">Chanson's Music Player</h1>
       <div class="container">
         <div id="app-cover">
           <div id="player">
