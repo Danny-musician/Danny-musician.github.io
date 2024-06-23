@@ -731,7 +731,7 @@
 
     @media all and (max-width: 768px) {
       #app-cover {
-        margin-left: 20px;
+        /* margin-left: 10px; */
         /* Adjusted for smaller screens */
         width: 100%;
         /* Full width on smaller screens */
@@ -772,15 +772,29 @@
       }
 
       #player-controls {
-        height: 50px;
-        /* Reduced height */
-        bottom: 10px;
-        /* Adjusted bottom spacing */
-        left: 50%;
-        /* Center horizontally */
-        transform: translateX(-50%);
-        /* Center horizontally */
+        width: 100%;
+        /* Full width */
+        max-width: 400px;
+        /* Maximum width */
+        height: auto;
+        /* Adjust height as needed */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        margin: 15px auto 0 auto;
+        /* Adjusted margin */
       }
+
+      .control {
+        flex: 1;
+        /* Equal width buttons */
+        margin: 0 5px;
+        /* Adjusted spacing between buttons */
+      }
+
 
       .button {
         width: 50px;
