@@ -732,80 +732,63 @@
     @media all and (max-width: 768px) {
       #app-cover {
         margin-top: 50px;
-        margin-left: 0px;
-        /* Adjusted for smaller screens */
-        width: 100%;
-        /* Full width on smaller screens */
-        max-width: 400px;
-        /* Maximum width for content */
+        margin-left: 0;
+        width: 400px;
+        /* Fixed width */
         height: 100px;
-        /* Adjust height as needed */
       }
 
       #player-track {
         padding: 10px 15px;
-        /* Adjusted padding */
       }
 
       #album-name {
         font-size: 14px;
-        /* Smaller font size */
       }
 
       #track-name {
         font-size: 11px;
-        /* Smaller font size */
       }
 
       #current-time,
       #track-length {
         font-size: 10px;
-        /* Smaller font size */
       }
 
       #album-art {
         width: 100px;
-        /* Smaller album art */
         height: 100px;
-        /* Smaller album art */
         margin-left: 40px;
-        /* Adjusted margin */
       }
 
       #player-track.active {
         top: -95px;
       }
 
-
       #player-controls {
-        width: 100%;
-        /* Full width */
-        max-width: 400px;
-        /* Maximum width */
+        width: 400px;
+        /* Fixed width */
         height: 100px;
-        /* Adjust height as needed */
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
         bottom: 0;
-        left: 100px;
+        left: 0;
         /* margin: 15px auto 0 auto; */
-        /* Adjusted margin */
       }
 
       .control {
         flex: 1;
-        margin: 0 2px;
-        /* Adjusted spacing between buttons */
+        margin: 0 1px;
         display: flex;
         justify-content: center;
         align-items: center;
       }
 
       .button {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
         background-color: #fff;
         border-radius: 6px;
         cursor: pointer;
@@ -815,7 +798,7 @@
       }
 
       .button i {
-        font-size: 20px;
+        font-size: 18px;
         color: #d6dee7;
       }
     }
