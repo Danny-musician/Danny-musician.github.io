@@ -411,14 +411,14 @@
       right: 15px;
       left: 15px;
       padding: 13px 22px 10px 184px;
-      background-color: #fff7f7;
+      /* background-color: #fff7f7; */
       border-radius: 15px 15px 0 0;
       transition: 0.3s ease top;
       z-index: 1;
     }
 
     #player-track.active {
-      top: -100px;
+      top: -105px;
     }
 
     #album-name {
@@ -506,7 +506,7 @@
       bottom: 0;
       left: 0;
       width: 0;
-      background-color: #fd6d94;
+      background-color: black;
       transition: 0.2s ease width;
       z-index: 1;
     }
@@ -1162,11 +1162,13 @@
         albums = ["Bye Bye", "Let It Flow", "Back At One"],
         trackNames = ["Junchuan - Bye Bye", "Junchuan - Let It Flow", "Junchuan - Back At One"],
         albumArtworks = ["_1", "_2", "_3"],
+        backgroundColors = ['#fff7f7', '#f0f8ff', '#fff5eb'],
         trackUrl = ["img/chanson - Bye Bye (Cover).mp3", "img/chanson - Let it flow (cover).mp3", "img/backatone.mp3"],
         playPreviousTrackButton = $("#play-previous"),
         playNextTrackButton = $("#play-next"),
         currIndex = -1,
         audio = new Audio();  // 确保 audio 对象已初始化
+
 
       function playPause() {
         setTimeout(function () {
@@ -1321,6 +1323,9 @@
           trackName.text(currTrackName);
           albumArt.find("img.active").removeClass("active");
           $("#" + currArtwork).addClass("active");
+
+          // Update background color based on currIndex
+          playerTrack.css('background-color', backgroundColors[currIndex]);
         } else {
           if (flag == 0 || flag == 1) --currIndex;
           else ++currIndex;
