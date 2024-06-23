@@ -390,37 +390,13 @@
     }
 
 
+
+
     #app-cover {
       font-family: Helvetica, Arial;
       width: 430px;
       height: 100px;
       margin: -4px auto;
-    }
-
-    #bg-artwork {
-      position: fixed;
-      top: -30px;
-      right: -30px;
-      bottom: -30px;
-      left: -30px;
-      background-image: url("img/byebye.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: 50%;
-      filter: blur(40px);
-      -webkit-filter: blur(40px);
-      z-index: 1;
-    }
-
-    #bg-layer {
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-color: #fff;
-      opacity: 0.51;
-      z-index: 2;
     }
 
     #player {
@@ -1032,8 +1008,6 @@
 
           <li>
             <div id="app-cover">
-              <div id="bg-artwork"></div>
-              <div id="bg-layer"></div>
               <div id="player">
                 <div id="player-track">
                   <div id="album-name"></div>
@@ -1159,8 +1133,6 @@
   <script>
     $(function () {
       var playerTrack = $("#player-track"),
-        bgArtwork = $("#bg-artwork"),
-        bgArtworkUrl,
         albumName = $("#album-name"),
         trackName = $("#track-name"),
         albumArt = $("#album-art"),
@@ -1362,10 +1334,6 @@
           trackName.text(currTrackName);
           albumArt.find("img.active").removeClass("active");
           $("#" + currArtwork).addClass("active");
-
-          bgArtworkUrl = $("#" + currArtwork).attr("src");
-
-          bgArtwork.css({ "background-image": "url(" + bgArtworkUrl + ")" });
         } else {
           if (flag == 0 || flag == 1) --currIndex;
           else ++currIndex;
