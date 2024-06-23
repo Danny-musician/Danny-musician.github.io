@@ -434,7 +434,7 @@
 
     @media all and (max-width: 768px) {
       .audio-title {
-        font-size: 30pt;
+        font-size: 26pt;
       }
     }
 
@@ -726,6 +726,72 @@
 
     .button:hover i {
       color: #fff;
+    }
+
+    @media all and (max-width: 768px) {
+      #app-cover {
+        margin-left: 20px;
+        /* Adjusted for smaller screens */
+        width: 100%;
+        /* Full width on smaller screens */
+        max-width: 400px;
+        /* Maximum width for content */
+        height: auto;
+        /* Adjust height as needed */
+      }
+
+      #player-track {
+        padding: 10px 15px;
+        /* Adjusted padding */
+      }
+
+      #album-name {
+        font-size: 14px;
+        /* Smaller font size */
+      }
+
+      #track-name {
+        font-size: 11px;
+        /* Smaller font size */
+      }
+
+      #current-time,
+      #track-length {
+        font-size: 10px;
+        /* Smaller font size */
+      }
+
+      #album-art {
+        width: 80px;
+        /* Smaller album art */
+        height: 80px;
+        /* Smaller album art */
+        margin-left: 20px;
+        /* Adjusted margin */
+      }
+
+      #player-controls {
+        height: 50px;
+        /* Reduced height */
+        bottom: 10px;
+        /* Adjusted bottom spacing */
+        left: 50%;
+        /* Center horizontally */
+        transform: translateX(-50%);
+        /* Center horizontally */
+      }
+
+      .button {
+        width: 50px;
+        /* Smaller button width */
+        height: 50px;
+        /* Smaller button height */
+      }
+
+      .button i {
+        font-size: 20px;
+        /* Smaller icon size */
+      }
     }
   </style>
 
