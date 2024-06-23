@@ -1142,6 +1142,50 @@
     });
   </script>
 
+  <div id="app-cover">
+    <div id="player">
+      <div id="player-track">
+        <div id="album-name"></div>
+        <div id="track-name"></div>
+        <div id="track-time">
+          <div id="current-time"></div>
+          <div id="track-length"></div>
+        </div>
+        <div id="s-area">
+          <div id="ins-time"></div>
+          <div id="s-hover"></div>
+          <div id="seek-bar"></div>
+        </div>
+      </div>
+      <div id="player-content">
+        <div id="album-art">
+          <img src="img/byebye.jpg" class="active" id="_1">
+          <img src="img/letitflow.jpg" id="_2">
+          <img src="img/backatone.jpg" id="_3">
+          <div id="buffer-box">Buffering ...</div>
+        </div>
+        <div id="player-controls">
+          <div class="control">
+            <div class="button" id="play-previous">
+              <i class="fas fa-backward"></i>
+            </div>
+          </div>
+          <div class="control">
+            <div class="button" id="play-pause-button">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+          <div class="control">
+            <div class="button" id="play-next">
+              <i class="fas fa-forward"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     $(function () {
       var playerTrack = $("#player-track"),
@@ -1157,50 +1201,29 @@
         i = playPauseButton.find("i"),
         tProgress = $("#current-time"),
         tTime = $("#track-length"),
-        seekT,
-        seekLoc,
-        seekBarPos,
-        cM,
-        ctMinutes,
-        ctSeconds,
-        curMinutes,
-        curSeconds,
-        durMinutes,
-        durSeconds,
-        playProgress,
-        bTime,
-        nTime = 0,
-        buffInterval = null,
+        seekT, seekLoc, seekBarPos, cM, ctMinutes, ctSeconds, curMinutes, curSeconds,
+        durMinutes, durSeconds, playProgress, bTime, nTime = 0, buffInterval = null,
         tFlag = false,
-        albums = [
-          "Bye Bye",
-          "Let It Flow",
-          "Back At One"
-        ],
-        trackNames = [
-          "Chanson (Junchuan) - Bye Bye",
-          "Chanson (Junchuan) - Let It Flow",
-          "Chanson (Junchuan) - Back At One"
-        ],
+        albums = ["Bye Bye", "Let It Flow", "Back At One"],
+        trackNames = ["Chanson (Junchuan) - Bye Bye", "Chanson (Junchuan) - Let It Flow", "Chanson (Junchuan) - Back At One"],
         albumArtworks = ["_1", "_2", "_3"],
-        trackUrl = [
-          "img/chanson - Bye Bye (Cover).mp3",
-          "img/chanson - Let it flow (cover).mp3",
-          "img/backatone.mp3"
-        ],
+        trackUrl = ["img/chanson - Bye Bye (Cover).mp3", "img/chanson - Let it flow (cover).mp3", "img/backatone.mp3"],
         playPreviousTrackButton = $("#play-previous"),
         playNextTrackButton = $("#play-next"),
-        currIndex = -1;
+        currIndex = -1,
+        audio = new Audio();  // 确保 audio 对象已初始化
 
       function playPause() {
         setTimeout(function () {
           if (audio.paused) {
+            console.log("Playing audio");
             playerTrack.addClass("active");
             albumArt.addClass("active");
             checkBuffering();
             i.attr("class", "fas fa-pause");
             audio.play();
           } else {
+            console.log("Pausing audio");
             playerTrack.removeClass("active");
             albumArt.removeClass("active");
             clearInterval(buffInterval);
@@ -1276,19 +1299,14 @@
         if (isNaN(durMinutes) || isNaN(durSeconds)) tTime.text("00:00");
         else tTime.text(durMinutes + ":" + durSeconds);
 
-        if (
-          isNaN(curMinutes) ||
-          isNaN(curSeconds) ||
-          isNaN(durMinutes) ||
-          isNaN(durSeconds)
-        )
+        if (isNaN(curMinutes) || isNaN(curSeconds) || isNaN(durMinutes) || isNaN(durSeconds))
           trackTime.removeClass("active");
         else trackTime.addClass("active");
 
         seekBar.width(playProgress + "%");
 
         if (playProgress == 100) {
-          i.attr("class", "fa fa-play");
+          i.attr("class", "fas fa-play");
           seekBar.width(0);
           tProgress.text("00:00");
           albumArt.removeClass("buffering").removeClass("active");
@@ -1312,10 +1330,10 @@
         else --currIndex;
 
         if (currIndex > -1 && currIndex < albumArtworks.length) {
-          if (flag == 0) i.attr("class", "fa fa-play");
+          if (flag == 0) i.attr("class", "fas fa-play");
           else {
             albumArt.removeClass("buffering");
-            i.attr("class", "fa fa-pause");
+            i.attr("class", "fas fa-pause");
           }
 
           seekBar.width(0);
@@ -1326,6 +1344,8 @@
           currAlbum = albums[currIndex];
           currTrackName = trackNames[currIndex];
           currArtwork = albumArtworks[currIndex];
+
+          console.log("Loading track: " + currTrackName);
 
           audio.src = trackUrl[currIndex];
 
@@ -1353,7 +1373,7 @@
       }
 
       function initPlayer() {
-        audio = new Audio();
+        console.log("Initializing player");
 
         selectTrack(0);
 
@@ -1381,8 +1401,8 @@
 
       initPlayer();
     });
-
   </script>
+
 </body>
 
 </html>
