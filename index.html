@@ -1,1530 +1,1314 @@
 <!doctype html>
-<!-- saved from url=(0036)https://arnolds.github.io/pineapple/ -->
 <html lang="en">
-
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>danny-musician</title>
-  <meta name="author" content="Pineapple" />
-  <meta name="description"
-    content="In 1493, explorer Christopher Columbus found pineapples on Guadeloupe Island in the Caribbean. Pineapple on pizza soon followed..." />
-  <meta name="keywords" content="Pineapple, Pineapple Pizza, Pineapple House" />
-
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="robots" content="index,follow" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <meta name="theme-color" content="#ffffff" />
-  <link rel="stylesheet" href="./style/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Pathway+Extreme&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Junchuan Zhao's music homepage: vocalist, pianist, choir conductor, and AI researcher.">
+  <title>Junchuan Zhao | Music</title>
   <style>
-    .full-text {
-      display: none;
+    @font-face {
+      font-family: "Espoir";
+      src: url("./Espoir.ttf") format("truetype");
+      font-display: swap;
     }
 
     @font-face {
-      font-family: 'BOSCH';
-      src: url('Bosch.otf') format('opentype');
+      font-family: "Bosch";
+      src: url("./Bosch.otf") format("opentype");
+      font-display: swap;
     }
 
     @font-face {
-      font-family: 'Espoir';
-      src: url('Espoir.ttf') format('truetype');
-      font-weight: 300;
+      font-family: "Quinsi";
+      src: url("./quinsi.ttf") format("truetype");
+      font-display: swap;
     }
 
-    @font-face {
-      font-family: 'ClearLight';
-      src: url('clearlight.regular.ttf') format('truetype');
-      font-weight: normal;
+    :root {
+      --paper: #f4efe7;
+      --paper-2: #fffaf1;
+      --paper-3: #eadcc7;
+      --ink: #1c1a18;
+      --muted: #6f665d;
+      --line: #d5c4ad;
+      --line-strong: #bfa180;
+      --rose: #9d5e58;
+      --clay: #c88567;
+      --gold: #b8975d;
+      --sage: #60766e;
+      --teal: #315f63;
+      --plum: #605071;
+      --night: #151d20;
+      --surface: rgba(255, 250, 241, .78);
+      --surface-strong: rgba(255, 252, 246, .94);
+      --shadow: 0 22px 60px rgba(63, 45, 28, .14);
+      --shadow-soft: 0 12px 34px rgba(63, 45, 28, .08);
+      --radius: 10px;
+      color-scheme: light;
+      font-family: Georgia, "Times New Roman", serif;
     }
 
-    @font-face {
-      font-family: 'Chafuer';
-      src: url('Chafuer.otf') format('truetype');
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--paper);
     }
-
-
-    @font-face {
-      font-family: 'Melgis';
-      src: url('Melgis.otf') format('truetype');
-    }
-
-    @font-face {
-      font-family: 'quinsi';
-      src: url('quinsi.ttf') format('truetype');
-    }
-
 
     body {
-      /* font-family: 'Playfair Display', serif; */
-      font-family: 'Pathway Extreme', sans-serif;
-      background-color: rgb(255, 255, 255);
-    }
-
-    h2 {
-      font-size: 8pt !important;
-      font-weight: 600;
-      color: #585858;
-      transition: text-shadow 0.3s ease;
-    }
-
-    h3 {
-      /* font-family: 'Playfair Display', serif; */
-      font-family: 'Pathway Extreme', sans-serif;
-      font-size: 12pt !important;
-    }
-
-    .bio {
-      text-align: justify;
-      font-weight: 200;
-      font-size: 15pt !important;
-      display: inline-block;
-      text-align: justify;
-      padding-left: 20%;
-      padding-right: 20%;
-      transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
-      overflow: hidden;
-    }
-
-    .full-text {
-      text-align: justify;
-      font-weight: 200;
-      font-size: 15pt !important;
-      display: inline-block;
-      text-align: justify;
-      padding-left: 20%;
-      padding-right: 20%;
-      transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
-      overflow: hidden;
-      opacity: 0;
-      max-height: 0;
-    }
-
-    .full-text.show {
-      opacity: 1;
-      max-height: 1500px;
-      /* large enough to accommodate the full content */
-    }
-
-    .full-text a {
-      color: #726ba5;
-      font-weight: bold;
-      text-decoration: none;
-      /* optional, depending on if you want underline or not */
-    }
-
-    .full-text a:hover {
-      color: #4c476e;
-      font-weight: 700 !important;
-      /* adjust if you want it bolder */
-    }
-
-    h1.logo {
-      margin-top: 70px;
-      margin-left: 20px;
-      /* Add space above the logo */
-      font-family: 'Espoir', Arial, sans-serif;
-      font-weight: 300;
-      /* Use a lighter font weight */
-      font-size: 100px;
-      /* Adjust font size as needed */
-      vertical-align: middle;
-      /* Center align text horizontally */
-    }
-
-    @media all and (max-width: 768px) {
-      h1.logo {
-        font-size: 42px;
-        margin-bottom: 50px;
-      }
-    }
-
-    .versatile-singer {
-      color: #4b7f85;
-      font-weight: 500 !important;
-      transition: color 0.3s, text-shadow 0.3s;
-    }
-
-    .ai-researcher {
-      color: #7a6ea1;
-      font-weight: 500 !important;
-      transition: color 0.3s, text-shadow 0.3s;
-    }
-
-    .versatile-singer:hover {
-      color: #4b7f85;
-      /* Default hover color for both */
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    }
-
-    .ai-researcher:hover {
-      color: #645685;
-      /* Specific hover color for .ai-researcher */
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    }
-
-    @media all and (max-width: 768px) {
-      .logo {
-        padding-top: 20px;
-        font-size: 4rem;
-      }
-    }
-
-    #fixed-nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 60px;
-      /* Fixed height of the navigation bar */
-      background-color: rgb(255, 255, 255);
-      z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      display: flex;
-      /* Use flexbox for vertical alignment */
-      align-items: center;
-      /* Center items vertically */
-      transition: box-shadow 0.3s ease;
-      /* Smooth transition */
-    }
-
-    /* Style when the nav bar is scrolled */
-    #fixed-nav.scrolled {
-      box-shadow: 0 2px 5px rgba(255, 255, 255);
-      /* Pure white background */
-    }
-
-    /* CSS for the navigation links */
-    #fixed-nav ul {
-      list-style-type: none;
       margin: 0;
-      padding: 0;
-      text-align: left;
+      background:
+        radial-gradient(circle at 9% 10%, rgba(184, 151, 93, .16), transparent 34%),
+        radial-gradient(circle at 88% 9%, rgba(49, 95, 99, .12), transparent 34%),
+        radial-gradient(circle at 75% 78%, rgba(157, 94, 88, .10), transparent 36%),
+        linear-gradient(145deg, var(--paper-2) 0%, var(--paper) 52%, var(--paper-3) 100%);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.58;
+      overflow-x: hidden;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
     }
 
-    #fixed-nav ul li {
-      display: inline;
-      margin-left: 20px;
-      vertical-align: middle;
-      /* Adjust spacing between links */
+    body:before {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      pointer-events: none;
+      content: "";
+      background-image:
+        linear-gradient(rgba(49, 95, 99, .055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(49, 95, 99, .045) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .56) 52%, transparent 100%);
     }
 
-    .junchuan {
-      font-family: 'BOSCH', serif;
-      font-size: 30px;
-      color: black;
+    body:after {
+      position: fixed;
+      right: -8vw;
+      bottom: -18vh;
+      z-index: -1;
+      width: min(680px, 58vw);
+      aspect-ratio: 1;
+      pointer-events: none;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle, rgba(184, 151, 93, .18), transparent 64%),
+        repeating-radial-gradient(circle, rgba(49, 95, 99, .10) 0 1px, transparent 1px 18px);
+      opacity: .58;
+      filter: blur(.2px);
+      content: "";
+    }
+
+    a {
+      color: inherit;
       text-decoration: none;
-      /* Remove underline from links */
-      transition: color 0.3s ease, font-size 0.3s ease;
-      vertical-align: middle;
     }
 
-    .junchuan:hover {
-      color: #555086;
-      /* Purple color on hover */
-      font-size: 36px;
-      /* Larger font size on hover */
-    }
-
-    .intro {
-      margin-top: -170px;
-      /* Adjust this value to reduce the space */
-      margin-bottom: 20px;
-      /* You can adjust margin-bottom as well if needed */
-    }
-
-    .music-text {
-      color: #5ca0a8;
-      font-weight: bold;
-      transition: color 0.3s ease, font-weight 0.3s ease;
-    }
-
-    .place-text {
-      color: #9b91c7;
-      font-weight: bold;
-      transition: color 0.3s ease, font-weight 0.3s ease;
-    }
-
-    .music-text:hover {
-      color: #4B7F85;
-      font-weight: 800;
-    }
-
-    .place-text:hover {
-      color: #7a6fb1;
-      font-weight: 800;
-    }
-
-    .button2 {
-      width: 110px;
-      height: 40px;
-      display: inline-block;
-      transition: all 0.2s ease-in;
-      position: relative;
-      overflow: hidden;
-      z-index: 1;
-      color: #090909;
-      /* Adjusted padding for width */
-      cursor: pointer;
-      font-size: 18px;
-      font-family: 'Pathway Extreme', sans-serif;
-      /* Adjusted font size */
-      border-radius: 0.5em;
-      background: #f5f5f5;
-      border: 1px solid #e8e8e8;
-      box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
-      float: center;
-      /* Aligns the button to the right */
-      margin-top: -100px;
-      margin-left: 20%;
-      margin-right: 20%;
-    }
-
-    .button2:active {
-      color: #666;
-      box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
-    }
-
-    .button2:before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%) scaleY(1) scaleX(1.25);
-      top: 100%;
-      width: 140%;
-      height: 180%;
-      background-color: rgba(0, 0, 0, 0.05);
-      border-radius: 50%;
+    img,
+    video {
       display: block;
-      transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
-      z-index: -1;
+      max-width: 100%;
     }
 
-    .button2:after {
-      content: "";
-      position: absolute;
-      left: 55%;
-      transform: translateX(-50%) scaleY(1) scaleX(1.45);
-      top: 180%;
-      width: 160%;
-      height: 190%;
-      background-color: #009087;
-      border-radius: 50%;
-      display: block;
-      transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
-      z-index: -1;
+    button,
+    a,
+    input {
+      font: inherit;
+      transition:
+        color .2s ease,
+        background .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease,
+        transform .2s ease,
+        opacity .2s ease;
     }
 
-    .button2:hover {
-      color: #ffffff;
-      border: 1px solid #009087;
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid rgba(49, 95, 99, .62);
+      outline-offset: 3px;
     }
 
-    .button2:hover:before {
-      top: -35%;
-      background-color: #009087;
-      transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
-    }
-
-    .button2:hover:after {
-      top: -45%;
-      background-color: #009087;
-      transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
-    }
-
-    @media all and (max-width: 768px) {
-      .intro {
-        padding-top: 20%;
-      }
-
-      .bio {
-        padding-left: 15%;
-        padding-right: 15%;
-        font-size: 15px !important;
-      }
-
-      .full-text {
-        padding-left: 15%;
-        padding-right: 15%;
-        font-size: 15px !important;
-      }
-
-      .button2 {
-        margin-left: 10%;
-        margin-right: 10%;
-      }
-    }
-
-    .video-wrapper {
-      position: relative;
-      display: inline-block;
-    }
-
-    .video-wrapper img {
-      width: 100%;
-    }
-
-    .video-wrapper video,
-    .video-wrapper .gif {
-      display: none;
-      position: absolute;
+    .site-nav {
+      position: sticky;
       top: 0;
-      left: 0;
+      z-index: 30;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 62px;
+      padding: 10px clamp(18px, 4.8vw, 64px);
+      border-bottom: 1px solid rgba(213, 196, 173, .76);
+      background: rgba(246, 239, 228, .9);
+      backdrop-filter: blur(18px);
+    }
+
+    .brand {
+      font-family: "Bosch", ui-sans-serif, system-ui, sans-serif;
+      font-size: 30px;
+      line-height: 1;
+      color: var(--ink);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      font-size: 14px;
+      font-weight: 750;
+    }
+
+    .nav-links a {
+      padding: 8px 10px;
+      border-radius: 999px;
+    }
+
+    .nav-links a:hover {
+      background: rgba(157, 94, 88, .1);
+      color: var(--rose);
+    }
+
+    .hero,
+    main,
+    .site-footer {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      min-height: calc(100vh - 62px);
+      display: grid;
+      grid-template-columns: minmax(0, .95fr) minmax(320px, .74fr);
+      gap: clamp(28px, 5vw, 70px);
+      align-items: center;
+      padding: clamp(42px, 6vw, 84px) 0 clamp(36px, 6vw, 70px);
+    }
+
+    .hero-copy {
+      max-width: 720px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+      color: var(--rose);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .eyebrow:before {
+      width: 44px;
+      height: 1px;
+      background: var(--gold);
+      content: "";
+    }
+
+    h1,
+    h2,
+    .display {
+      margin: 0;
+      font-family: "Espoir", Georgia, serif;
+      letter-spacing: 0;
+      font-weight: 300;
+    }
+
+    h1 {
+      max-width: 760px;
+      font-size: clamp(58px, 10vw, 128px);
+      line-height: .86;
+    }
+
+    h1 span {
+      color: var(--rose);
+    }
+
+    .hero-lede {
+      max-width: 650px;
+      margin: 22px 0 0;
+      color: var(--ink);
+      font-size: clamp(19px, 2vw, 25px);
+      line-height: 1.33;
+      font-weight: 600;
+    }
+
+    .hero-note {
+      max-width: 620px;
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 20px;
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      font-size: 13px;
+      font-weight: 750;
+    }
+
+    .hero-tags span {
+      padding: 7px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 250, 241, .62);
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 11px;
+      margin-top: 26px;
+    }
+
+    .button {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 16px;
+      border: 1px solid rgba(157, 94, 88, .35);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, .24), transparent 52%),
+        linear-gradient(135deg, #d79b7b, #a8625b 58%, #8e5554);
+      color: #fffaf1;
+      box-shadow: 0 12px 24px rgba(157, 94, 88, .13);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      font-size: 14px;
+      font-weight: 850;
+    }
+
+    .button.secondary {
+      background: rgba(255, 250, 241, .54);
+      color: var(--ink);
+      border-color: var(--line);
+      box-shadow: none;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 28px rgba(157, 94, 88, .16);
+    }
+
+    .stage-card {
+      position: relative;
+      max-width: 460px;
+      justify-self: end;
+      border: 1px solid rgba(213, 196, 173, .9);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .stage-card:before {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      background:
+        linear-gradient(180deg, transparent 46%, rgba(21, 29, 32, .72) 100%),
+        radial-gradient(circle at 76% 12%, rgba(184, 151, 93, .18), transparent 28%);
+      content: "";
+    }
+
+    .stage-card img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      filter: saturate(.96) contrast(1.02);
+    }
+
+    .stage-caption {
+      position: absolute;
+      right: 22px;
+      bottom: 20px;
+      left: 22px;
+      z-index: 3;
+      color: rgba(255, 250, 241, .93);
+    }
+
+    .stage-caption span {
+      display: block;
+      margin-bottom: 8px;
+      color: rgba(255, 250, 241, .68);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      font-size: 12px;
+      font-weight: 750;
+    }
+
+    .stage-caption strong {
+      display: block;
+      font-size: 21px;
+      line-height: 1.15;
+    }
+
+    main {
+      display: grid;
+      gap: clamp(42px, 6vw, 78px);
+      padding: 0 0 clamp(54px, 7vw, 90px);
+    }
+
+    section {
+      scroll-margin-top: 86px;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, .55fr) minmax(0, 1fr);
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 22px;
+      padding-bottom: 13px;
+      border-bottom: 1px solid rgba(213, 196, 173, .82);
+    }
+
+    .section-head h2 {
+      font-size: clamp(42px, 5.5vw, 72px);
+      line-height: .9;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.48;
+    }
+
+    .bio-panel {
+      display: grid;
+      grid-template-columns: minmax(0, .88fr) minmax(320px, .62fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .bio-copy,
+    .bio-details,
+    .music-player,
+    .contact-card {
+      border: 1px solid rgba(213, 196, 173, .88);
+      border-radius: var(--radius);
+      background:
+        radial-gradient(circle at 0 0, rgba(184, 151, 93, .08), transparent 32%),
+        linear-gradient(180deg, var(--surface-strong), rgba(255, 247, 232, .84));
+      box-shadow: var(--shadow-soft);
+    }
+
+    .bio-copy {
+      padding: clamp(18px, 2.4vw, 26px);
+      font-size: 17px;
+      line-height: 1.66;
+    }
+
+    .bio-copy p {
+      margin: 0 0 13px;
+    }
+
+    .bio-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    .bio-copy mark {
+      padding: 0 .18em;
+      background: rgba(184, 151, 93, .14);
+      color: var(--ink);
+      border-radius: 4px;
+    }
+
+    .bio-details {
+      display: grid;
+      gap: 12px;
+      align-content: start;
+      padding: clamp(18px, 2.2vw, 24px);
+    }
+
+    .detail-item {
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(213, 196, 173, .74);
+    }
+
+    .detail-item:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .detail-item span {
+      display: block;
+      color: var(--rose);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      font-size: 12px;
+      font-weight: 850;
+      text-transform: uppercase;
+    }
+
+    .detail-item strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 20px;
+      line-height: 1.22;
+    }
+
+    .more-text {
+      display: none;
+    }
+
+    .bio-copy.expanded .more-text {
+      display: inline;
+    }
+
+    .inline-link {
+      color: var(--teal);
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .text-button {
+      margin-top: 16px;
+      padding: 9px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 250, 241, .56);
+      color: var(--rose);
+      cursor: pointer;
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .text-button:hover {
+      transform: translateY(-1px);
+      border-color: rgba(157, 94, 88, .42);
+      background: rgba(157, 94, 88, .08);
+    }
+
+    .performance-grid,
+    .cover-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .performance-card,
+    .cover-card {
+      position: relative;
+      display: grid;
+      border: 1px solid rgba(213, 196, 173, .88);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--surface-strong);
+      box-shadow: var(--shadow-soft);
+      transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+    }
+
+    .performance-card:hover,
+    .cover-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(49, 95, 99, .34);
+      box-shadow: var(--shadow);
+    }
+
+    .media-frame {
+      position: relative;
+      aspect-ratio: 1;
+      overflow: hidden;
+      background: #161d20;
+    }
+
+    .media-frame img,
+    .media-frame video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity .35s ease, transform .45s ease, filter .35s ease;
+    }
+
+    .media-frame video {
+      opacity: 0;
+    }
+
+    .performance-card:hover .media-frame video {
+      opacity: 1;
+    }
+
+    .performance-card:hover .media-frame img,
+    .cover-card:hover .media-frame img {
+      transform: scale(1.035);
+      filter: saturate(1.03) contrast(1.03);
+    }
+
+    .media-frame:after {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, transparent 48%, rgba(18, 23, 25, .78) 100%);
+      content: "";
+    }
+
+    .card-copy {
+      display: grid;
+      gap: 7px;
+      padding: 14px 15px 16px;
+    }
+
+    .card-copy span {
+      color: var(--rose);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      font-size: 12px;
+      font-weight: 850;
+      text-transform: uppercase;
+    }
+
+    .card-copy h3 {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.18;
+    }
+
+    .card-copy p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.42;
+    }
+
+    .listen-layout {
+      display: grid;
+      grid-template-columns: minmax(0, .74fr) minmax(0, 1fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .cover-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .music-player {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 1fr);
+      gap: 18px;
+      align-items: center;
+      padding: clamp(18px, 2.3vw, 24px);
+    }
+
+    .album-disc {
+      position: relative;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #111;
+      box-shadow:
+        0 0 0 9px rgba(255, 250, 241, .7),
+        0 20px 34px rgba(63, 45, 28, .18);
+    }
+
+    .album-disc:after {
+      position: absolute;
+      inset: 50%;
+      width: 28px;
+      height: 28px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: var(--paper-2);
+      box-shadow: inset 0 0 0 1px var(--line);
+      content: "";
+    }
+
+    .album-disc img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
 
-    .video-wrapper:hover video,
-    .video-wrapper:hover .gif {
-      display: block;
+    .album-disc.playing img {
+      animation: spin 9s linear infinite;
     }
 
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.3);
-      color: white;
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .player-copy {
+      min-width: 0;
+    }
+
+    .player-copy h3 {
+      margin: 0;
+      font-size: clamp(28px, 3vw, 42px);
+      line-height: 1;
+    }
+
+    .player-copy p {
+      margin: 7px 0 0;
+      color: var(--muted);
+    }
+
+    .track-meta {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      transition: opacity 1.5s ease;
-      /* Longer transition time */
-    }
-
-    .video-wrapper:hover .overlay {
-      opacity: 1;
-    }
-
-    .overlay span {
-      font-family: 'Helvetica', sans-serif;
-      font-size: 1.2rem;
-      /* Smaller font size */
-      font-weight: bold;
-      letter-spacing: 0.1em;
-      /* More space between words */
-    }
-
-
-    .audio_player {
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 60vh;
-    }
-
-    .audio-title {
-      /* font-family: 'Melgis', sans-serif; */
-      font-family: 'quinsi', sans-serif;
-      font-size: 40pt;
-      font-weight: 150;
-      margin-bottom: 25%;
-      margin-top: -70px;
-    }
-
-    .container-audio {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    #app-cover {
-      margin-left: 50px;
-      font-family: Helvetica, Arial;
-      width: 400px;
-      height: 100px;
-      /* align-items: center; */
-    }
-
-    #player {
-      position: relative;
-      height: 100%;
-      z-index: 3;
-    }
-
-    #player-track {
-      position: absolute;
-      top: 0px;
-      right: 15px;
-      left: 15px;
-      padding: 13px 22px 10px 184px;
-      /* background-color: #fff7f7; */
-      border-radius: 15px 15px 0 0;
-      transition: 0.3s ease top;
-      z-index: 1;
-    }
-
-    #player-track.active {
-      top: -105px;
-    }
-
-    #album-name {
-      color: #54576f;
-      font-size: 17px;
-      font-weight: bold;
-    }
-
-    #track-name {
-      color: #acaebd;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 18px;
+      color: var(--muted);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
       font-size: 12px;
-      margin: 2px 0 13px 0;
+      font-weight: 750;
     }
 
-    #track-time {
-      height: 12px;
-      margin-bottom: 3px;
-      overflow: hidden;
-    }
-
-    #current-time {
-      float: left;
-    }
-
-    #track-length {
-      float: right;
-    }
-
-    #current-time,
-    #track-length {
-      color: transparent;
-      font-size: 11px;
-      /* background-color: #ffe8ee; */
-      border-radius: 10px;
-      transition: 0.3s ease all;
-    }
-
-    #track-time.active #current-time,
-    #track-time.active #track-length {
-      color: black;
-      background-color: transparent;
-    }
-
-    #s-area,
-    #seek-bar {
+    .progress {
       position: relative;
-      height: 4px;
-      border-radius: 4px;
-    }
-
-    #s-area {
-      background-color: #e0e0e0;
+      height: 6px;
+      margin-top: 8px;
+      border-radius: 999px;
+      background: rgba(213, 196, 173, .7);
+      overflow: hidden;
       cursor: pointer;
     }
 
-    #ins-time {
-      position: absolute;
-      top: -29px;
-      color: #fff;
-      font-size: 12px;
-      white-space: pre;
-      padding: 5px 6px;
-      border-radius: 4px;
-      display: none;
-    }
-
-    #s-hover {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      opacity: 0.2;
-      z-index: 2;
-    }
-
-    #ins-time,
-    #s-hover {
-      background-color: #3b3d50;
-    }
-
-    #seek-bar {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
+    .progress-fill {
       width: 0;
-      background-color: #656565;
-      transition: 0.2s ease width;
-      z-index: 1;
-    }
-
-    #player-content {
-      position: relative;
       height: 100%;
-      background-color: #fff;
-      box-shadow: 0 30px 80px #656565;
-      border-radius: 15px;
-      z-index: 2;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--rose), var(--teal));
     }
 
-    #album-art {
-      position: absolute;
-      top: -40px;
-      width: 115px;
-      height: 115px;
-      margin-left: 40px;
-      transform: rotateZ(0);
-      transition: 0.3s ease all;
-      box-shadow: 0 0 0 10px #fff;
+    .player-controls {
+      display: flex;
+      gap: 9px;
+      margin-top: 17px;
+    }
+
+    .control-button {
+      width: 42px;
+      height: 42px;
+      display: inline-grid;
+      place-items: center;
+      border: 1px solid var(--line);
       border-radius: 50%;
+      background: rgba(255, 250, 241, .66);
+      color: var(--ink);
+      cursor: pointer;
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      font-weight: 850;
+    }
+
+    .control-button.primary {
+      width: 48px;
+      height: 48px;
+      background: var(--night);
+      color: var(--paper-2);
+      border-color: var(--night);
+    }
+
+    .control-button:hover {
+      transform: translateY(-2px);
+      border-color: rgba(157, 94, 88, .38);
+    }
+
+    .contact-card {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0;
       overflow: hidden;
     }
 
-    #album-art.active {
-      top: -60px;
-      box-shadow: 0 0 0 4px #fff7f7, 0 30px 50px -15px #afb7c1;
+    .contact-block {
+      padding: 18px 20px;
+      border-right: 1px solid rgba(213, 196, 173, .72);
     }
 
-    #album-art:before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: 0;
-      left: 0;
-      width: 20px;
-      height: 20px;
-      margin: -10px auto 0 auto;
-      background-color: #d6dee7;
-      border-radius: 50%;
-      box-shadow: inset 0 0 0 2px #fff;
-      z-index: 2;
+    .contact-block:last-child {
+      border-right: 0;
     }
 
-    #album-art img {
+    .contact-block span {
       display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      z-index: -1;
+      color: var(--rose);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      font-size: 12px;
+      font-weight: 850;
+      text-transform: uppercase;
     }
 
-    #album-art img.active {
-      opacity: 1;
-      z-index: 1;
-    }
-
-    #album-art.active img.active {
-      z-index: 1;
-      animation: rotateAlbumArt 3s linear 0s infinite forwards;
-    }
-
-    @keyframes rotateAlbumArt {
-      0% {
-        transform: rotateZ(0);
-      }
-
-      100% {
-        transform: rotateZ(360deg);
-      }
-    }
-
-    #buffer-box {
-      position: absolute;
-      top: 50%;
-      right: 0;
-      left: 0;
-      height: 13px;
-      color: #1f1f1f;
-      font-size: 13px;
-      font-family: Helvetica;
-      text-align: center;
-      font-weight: bold;
-      line-height: 1;
-      padding: 6px;
-      margin: -12px auto 0 auto;
-      background-color: rgba(255, 255, 255, 0.19);
-      opacity: 0;
-      z-index: 2;
-    }
-
-    #album-art img,
-    #buffer-box {
-      transition: 0.1s linear all;
-    }
-
-    #album-art.buffering img {
-      opacity: 0.25;
-    }
-
-    #album-art.buffering img.active {
-      opacity: 0.8;
-      filter: blur(2px);
-      -webkit-filter: blur(2px);
-    }
-
-    #album-art.buffering #buffer-box {
-      opacity: 1;
-    }
-
-    #player-controls {
-      width: 100%;
-      height: 70px;
-      /* Adjust height as needed */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      bottom: 15px;
-      left: 80px;
-      /* Adjust bottom spacing as needed */
-    }
-
-    .control {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0 5px;
-      /* Adjust spacing between buttons */
-    }
-
-    .button {
-      width: 60px;
-      /* Adjust width as needed */
-      height: 60px;
-      /* Adjust height as needed */
-      background-color: #fff;
-      border-radius: 6px;
+    .contact-block a,
+    .contact-block button {
+      display: inline-block;
+      margin-top: 7px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: var(--ink);
+      font-size: 18px;
+      font-weight: 650;
       cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
 
-    .button i {
-      color: #d6dee7;
-      font-size: 26px;
-      text-align: center;
-      line-height: 1;
+    .contact-block a:hover,
+    .contact-block button:hover {
+      color: var(--teal);
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
-    .button,
-    .button i {
-      transition: 0.2s ease all;
+    .site-footer {
+      padding: 28px 0 42px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
     }
 
-    .button:hover {
-      background-color: #d6d6de;
+    .toast {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 60;
+      transform: translateY(130%);
+      padding: 11px 13px;
+      border: 1px solid rgba(213, 196, 173, .82);
+      border-radius: 8px;
+      background: var(--night);
+      color: var(--paper-2);
+      box-shadow: var(--shadow);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      font-size: 13px;
+      font-weight: 750;
+      transition: transform .24s ease;
     }
 
-    .button:hover i {
-      color: #fff;
+    .toast.show {
+      transform: translateY(0);
     }
 
-    @media all and (max-width: 768px) {
-      .audio-title {
-        font-size: 24pt;
-        margin-top: -150px;
-        padding-bottom: 50px;
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .55s ease, transform .55s ease;
+    }
+
+    .reveal.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .bio-panel,
+      .listen-layout,
+      .section-head {
+        grid-template-columns: 1fr;
+      }
+
+      .stage-card {
+        max-width: none;
+        justify-self: stretch;
+      }
+
+      .stage-card img {
+        aspect-ratio: 16 / 10;
+      }
+
+      .performance-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
-    @media all and (max-width: 768px) {
-
-      #app-cover {
-        margin-top: 50px;
-        margin-left: 0;
-        width: 300px;
-        /* Fixed width */
-        height: 100px;
+    @media (max-width: 680px) {
+      .site-nav {
+        align-items: flex-start;
+        gap: 10px;
+        flex-direction: column;
       }
 
-      #player-track {
-        padding: 10px 15px;
-        /* padding-bottom: 80px; */
+      .nav-links {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 2px;
       }
 
-      #player-track.active {
-        top: -92px;
+      .hero,
+      main,
+      .site-footer {
+        width: min(100% - 28px, 1180px);
       }
 
-      #album-name {
-        margin-left: 125px;
-        font-size: 14px;
+      .hero {
+        min-height: auto;
+        padding-top: 34px;
       }
 
-      #track-name {
-        margin-left: 125px;
-        font-size: 11px;
+      h1 {
+        font-size: clamp(54px, 18vw, 82px);
       }
 
-      #track-time {
-        margin-left: 125px;
-      }
-
-      #s-area {
-        margin-left: 125px;
-      }
-
-      #current-time,
-      #track-length {
-        font-size: 10px;
-      }
-
-      #album-art {
-        width: 100px;
-        height: 100px;
-        margin-left: 30px;
-      }
-
-      #player-controls {
-        width: 350px;
-        /* Fixed width */
-        height: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        bottom: 0;
-        left: 30px;
-        /* margin: 15px auto 0 auto; */
-      }
-
-      .control {
-        max-width: 45px !important;
-        flex: 1;
-        /* margin: 0 1px; */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 3px;
-        /* Reset any margins */
+      .hero-actions,
+      .hero-tags {
+        gap: 8px;
       }
 
       .button {
-        width: 40px;
-        height: 40px;
-        background-color: #fff;
-        border-radius: 6px;
-        cursor: pointer;
-        display: flex;
+        width: 100%;
+      }
+
+      .performance-grid,
+      .cover-grid,
+      .music-player,
+      .contact-card {
+        grid-template-columns: 1fr;
+      }
+
+      .music-player {
+        justify-items: center;
+        text-align: center;
+      }
+
+      .album-disc {
+        width: min(190px, 58vw);
+      }
+
+      .player-controls {
         justify-content: center;
-        align-items: center;
-        /* Reset any margins */
       }
 
-      .button i {
-        font-size: 18px;
-        color: #d6dee7;
+      .contact-block {
+        border-right: 0;
+        border-bottom: 1px solid rgba(213, 196, 173, .72);
       }
-    }
 
-    .valerie .vox2024 {
-      padding-top: 10px;
-    }
-
-    @media all and (max-width: 768px) {
-      .valerie .vox2024 {
-        padding-top: 0px;
+      .contact-block:last-child {
+        border-bottom: 0;
       }
     }
 
-    .smc_2023_demo {
-      color: #7a6ea1;
-      font-weight: 300 !important;
-      transition: color 0.3s, text-shadow 0.3s;
-    }
-
-    .smc_2023_demo {
-      color: #7a6ea1;
-      font-weight: bold !important;
-      transition: color 0.3s, text-shadow 0.3s;
-    }
-
-    .smc_2023_demo:hover {
-      color: #645685;
-      /* Specific hover color for .ai-researcher */
-      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *:before, *:after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .001ms !important;
+      }
     }
   </style>
-
 </head>
-
 <body>
-  <header class="header">
-    <div class="container" id="container_h">
-      <nav id="fixed-nav">
-        <ul>
-          <li><a href="https://danny-nus.github.io/" class="junchuan">Junchuan</a></li>
-        </ul>
-      </nav>
-
-      <h1 class="logo">
-        <a title="Pineapple" href="#">
-          Junchuan, <span class="versatile-singer">Versatile Singer</span> and
-        </a>
-        <a class="ai-researcher" href="https://danny-nus.github.io/" target="_blank" title="AI Researcher">AI
-          Researcher</a>
-      </h1>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a class="brand" href="#top">Junchuan</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#performances">Performances</a>
+      <a href="#recordings">Recordings</a>
+      <a href="#contact">Contact</a>
+      <a href="https://danny-nus.github.io/">Main Page</a>
     </div>
+  </nav>
+
+  <header id="top" class="hero">
+    <div class="hero-copy">
+      <div class="eyebrow">Vocalist / Pianist / Conductor</div>
+      <h1>Junchuan Zhao, <span>in music.</span></h1>
+      <p class="hero-lede">A personal stage for classical training, choir work, jazz vocals, R&amp;B covers, and music-shaped research imagination.</p>
+      <p class="hero-note">I sing, play, arrange, and perform across traditions, from classical piano and choral music to jazz band stages and lab concerts.</p>
+      <div class="hero-tags" aria-label="Musical background">
+        <span>Classical piano</span>
+        <span>Choir conducting</span>
+        <span>Jazz &amp; R&amp;B vocal</span>
+        <span>SMC concerts</span>
+      </div>
+      <div class="hero-actions">
+        <a class="button" href="#performances">Watch Performances</a>
+        <a class="button secondary" href="#recordings">Listen to Covers</a>
+        <a class="button secondary" href="https://danny-nus.github.io/">Back to Main Page</a>
+      </div>
+    </div>
+    <aside class="stage-card" aria-label="Featured performance image">
+      <img src="./img/4.jpg" alt="Junchuan Zhao performing at SMC Concert 2023">
+      <div class="stage-caption">
+        <span>Featured performance</span>
+        <strong>Valerie / SMC Concert 2023</strong>
+      </div>
+    </aside>
   </header>
-  <main class="content">
-    <section class="intro">
-      <div style="text-align: center;">
-        <h2>Personal Bio</h2>
-        <p class="bio">
-          With over a decade of experience, I am a classically trained <span class="music-text">pianist and choir
-            singer</span>, as well as the former
-          choir <span class="music-text">conductor</span> for <span class="place-text">AiYue Chorus</span> at BUPT. My
-          musical journey also includes performing as a <span class="music-text">jazz and R&B vocalist</span> with the
-          <span class="place-text">NUS JazzBand (NJB)</span>.
-        </p>
 
-        <p class="full-text" style="display: none;">
-          <!-- Additional text that will replace the initial text when shown -->
-          My musical journey began at the tender age of four when I started learning <span
-            style="background-color:#f4f3f7; font-weight: bold;">classical piano</span>, a passion that I
-          pursued until I was 15. I was fortunate to study under the guidance of Mrs. Lü Zhen (吕真), an Associate
-          Professor of Piano at the School of Music, South China Normal University, and a Visiting Professor at the
-          Central Conservatory of Music. <span style="background-color:#f4f3f7; font-weight: bold;">Her mentorship
-            helped
-            me build a
-            solid foundation
-            in classical music.</span>
-          <br>
-          <br>
-          After my classical training, I ventured into the world of <span
-            style="background-color:#f4f3f7; font-weight: bold;">popular music</span> by
-          teaching myself pop piano
-          arrangements. This exploration opened my eyes to the vast possibilities within music. In 2018, I expanded
-          my
-          repertoire by studying <span style="background-color:#f4f3f7; font-weight: bold;">Chinese folk singing</span>
-          with Mrs.
-          Zhang Xiuli (张秀丽), a graduate of the China
-          Conservatory of Music.
-          <br>
-          <br>
-          During my undergraduate studies at Beijing University of Posts and Telecommunications (BUPT), I joined the
-          <span style="background-color:#f4f3f7; font-weight: bold;">AiYue Chorus as a conductor</span>. I had the
-          privilege of
-          being guided by
-          <a href="https://sdmda.bupt.edu.cn/info/1075/1081.htm"> Mrs. Ma Menghe (马梦鹤)
-          </a>,
-          <a href="https://www.bupt.edu.cn/info/1079/71463.htm"> Mr. Li Hong (李闳)
-          </a>, and
-          <a href="https://baike.baidu.com/item/%E6%9D%8E%E5%8E%9A%E6%9C%B4/56262385"> Mr. Li Houpu (李厚朴)
-          </a>.
-          At the same time, I sang as a <span style="background-color:#f4f3f7; font-weight: bold;">bass in the
-            Beijing Queer Chorus (BQC)</span>, which enriched my
-          vocal
-          experience.
-          <br>
-          <br>
-          In recent years, my musical interests have gravitated towards <span
-            style="background-color:#f4f3f7; font-weight: bold;">R&B, Soul, and Jazz</span>. This passion led me to
-          join the <span style="background-color:#f4f3f7; font-weight: bold;">NUS Jazz Band (NJB)</span> as a <span
-            style="background-color:#f4f3f7; font-weight: bold;">vocalist</span>, where I continually explore and
-          perform
-          these
-          genres. Additionally,
-          I perform some of my favorite pieces at our lab's (SMC) annual concert, sharing my love for music with a
-          broader audience. Music has always been my way of communicating and expressing emotions. <span
-            style="background-color:#f4f3f7; font-weight: bold;">I relish the
-            freedom of singing and the joy it brings to both myself and my listeners.</span>
-        </p>
-        <br>
-        <br>
-        <button href="#" id="show-more" class="button2">MORE</button>
+  <main>
+    <section id="about" class="reveal">
+      <div class="section-head">
+        <h2>About</h2>
+        <p>Music has been a long-running part of my life: discipline, stage presence, ensemble listening, and expressive control.</p>
+      </div>
+      <div class="bio-panel">
+        <article class="bio-copy" id="bioCopy">
+          <p>With over a decade of experience, I am a classically trained <mark>pianist and choir singer</mark>, as well as the former choir <mark>conductor</mark> for <mark>AiYue Chorus</mark> at BUPT. My musical journey also includes performing as a <mark>jazz and R&amp;B vocalist</mark> with the NUS Jazz Band.</p>
+          <p class="more-text">My musical journey began when I started learning classical piano at the age of four. I studied under Mrs. Lü Zhen (吕真), Associate Professor of Piano at the School of Music, South China Normal University, and Visiting Professor at the Central Conservatory of Music.</p>
+          <p class="more-text">Later, I explored popular music through pop piano arrangements and Chinese folk singing with Mrs. Zhang Xiuli (张秀丽), a graduate of the China Conservatory of Music. During my undergraduate studies at BUPT, I joined AiYue Chorus as a conductor, guided by Mrs. Ma Menghe (马梦鹤), Mr. Li Hong (李闳), and Mr. Li Houpu (李厚朴).</p>
+          <p class="more-text">In recent years, my musical interests have moved toward R&amp;B, Soul, and Jazz. I joined the NUS Jazz Band as a vocalist and also perform at the Sound and Music Computing Lab's annual concerts. Music remains my way of shaping emotion, attention, and communication.</p>
+          <button class="text-button" id="bioToggle" type="button">Read More</button>
+        </article>
+        <aside class="bio-details" aria-label="Music profile">
+          <div class="detail-item">
+            <span>Training</span>
+            <strong>Classical piano, Chinese folk singing, choral music</strong>
+          </div>
+          <div class="detail-item">
+            <span>Stage</span>
+            <strong>NUS Jazz Band, SMC Concerts, AiYue Chorus</strong>
+          </div>
+          <div class="detail-item">
+            <span>Sound</span>
+            <strong>Jazz, R&amp;B, Soul, pop piano, vocal ensemble</strong>
+          </div>
+          <div class="detail-item">
+            <span>Connection</span>
+            <strong>Performance informs my research on expressive audio generation.</strong>
+          </div>
+        </aside>
       </div>
     </section>
-    <section class="projects">
-      <div class="container">
+
+    <section id="performances" class="reveal">
+      <div class="section-head">
         <h2>Live Performance</h2>
-        <ul class="projects-list">
-          <li>
-            <a href="https://www.youtube.com/watch?v=DkPxZTfZkOk&list=PLIT5TPmY3gWzBzpTeQaR5JCxUuoMyQVCV&index=16"
-              data-sr-id="1" style="
-                visibility: visible;
-                -webkit-transform: translateY(0) scale(1);
-                opacity: 1;
-                transform: translateY(0) scale(1);
-                opacity: 1;
-                -webkit-transition:
-                  -webkit-transform 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s,
-                  opacity 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-                transition:
-                  transform 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s,
-                  opacity 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-              ">
-              <div class="video-wrapper">
-                <img src="./img/1.jpg" alt="Red Pineapple" />
-                <!-- Replace the source with your video URL -->
-                <video src="./img/1.mov" autoplay muted loop></video>
-                <!-- Or replace with a GIF URL -->
-                <!-- <img src="your-gif-url.gif" class="gif" alt="GIF"/> -->
-                <div class="overlay">
-                  <span>VIEW PROJECT</span>
-                </div>
-              </div>
-              <span class="h2"></span>
-              <h3>Stormy Weather | On Bali Lane 2022</h3>
-            </a>
-          </li>
+        <p>Selected stage moments. Hover on desktop to preview motion; open the card to watch the full performance.</p>
+      </div>
+      <div class="performance-grid">
+        <a class="performance-card" href="https://www.youtube.com/watch?v=DkPxZTfZkOk&list=PLIT5TPmY3gWzBzpTeQaR5JCxUuoMyQVCV&index=16" target="_blank" rel="noopener">
+          <div class="media-frame">
+            <img src="./img/1.jpg" alt="Stormy Weather performance">
+            <video src="./img/1.mov" muted loop playsinline preload="none"></video>
+          </div>
+          <div class="card-copy">
+            <span>On Bali Lane 2022</span>
+            <h3>Stormy Weather</h3>
+            <p>Jazz vocal performance with a warm club-stage energy.</p>
+          </div>
+        </a>
 
-          <li>
-            <a href="https://www.youtube.com/watch?v=DNtlf3SLGcc&list=PLIT5TPmY3gWzgTYVx3xSriWrjkjACylcE&index=17"
-              data-sr-id="2" style="
-                  visibility: visible;
-                  -webkit-transform: translateY(0) scale(1);
-                  opacity: 1;
-                  transform: translateY(0) scale(1);
-                  opacity: 1;
-                  -webkit-transition:
-                    -webkit-transform 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s,
-                    opacity 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-                  transition:
-                    transform 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s,
-                    opacity 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-                ">
-              <div class="video-wrapper">
-                <img src="./img/2.jpg" alt="Yellow Pineapple" />
-                <!-- Replace the source with your video URL -->
-                <video src="./img/2.mp4" autoplay muted loop></video>
-                <!-- Or replace with a GIF URL -->
-                <!-- <img src="your-gif-url.gif" class="gif" alt="GIF"/> -->
-                <div class="overlay">
-                  <span>VIEW PROJECT</span>
-                </div>
-              </div>
-              <span class="h2"></span>
-              <h3> Home At Last | I've Got Rhythm! 2023</h3>
-            </a>
-          </li>
+        <a class="performance-card" href="https://www.youtube.com/watch?v=DNtlf3SLGcc&list=PLIT5TPmY3gWzgTYVx3xSriWrjkjACylcE&index=17" target="_blank" rel="noopener">
+          <div class="media-frame">
+            <img src="./img/2.jpg" alt="Home At Last performance">
+            <video src="./img/2.mp4" muted loop playsinline preload="none"></video>
+          </div>
+          <div class="card-copy">
+            <span>I've Got Rhythm! 2023</span>
+            <h3>Home At Last</h3>
+            <p>A jazz-band performance shaped by groove and ensemble listening.</p>
+          </div>
+        </a>
 
-          <li>
-            <a href="https://www.bilibili.com/video/BV1hG411F7zX/?vd_source=1f5c4bcfb825a3807013d65c40099938"
-              data-sr-id="3" style="
-                  visibility: visible;
-                  -webkit-transform: translateY(0) scale(1);
-                  opacity: 1;
-                  transform: translateY(0) scale(1);
-                  opacity: 1;
-                  -webkit-transition:
-                    -webkit-transform 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s,
-                    opacity 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-                  transition:
-                    transform 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s,
-                    opacity 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-                ">
-              <div class="video-wrapper">
-                <img src="./img/3.jpg" alt="Green Pineapple" />
-                <!-- Replace the source with your video URL -->
-                <video src="./img/3.mov" autoplay muted loop></video>
-                <!-- Or replace with a GIF URL -->
-                <!-- <img src="your-gif-url.gif" class="gif" alt="GIF"/> -->
-                <div class="overlay">
-                  <span>VIEW PROJECT</span>
-                </div>
-              </div>
-              <span class="h2"></span>
-              <h3>I will never love again | SMC Concert 2022</h3>
-            </a>
-          </li>
+        <a class="performance-card" href="https://www.bilibili.com/video/BV1hG411F7zX/?vd_source=1f5c4bcfb825a3807013d65c40099938" target="_blank" rel="noopener">
+          <div class="media-frame">
+            <img src="./img/3.jpg" alt="I Will Never Love Again performance">
+            <video src="./img/3.mov" muted loop playsinline preload="none"></video>
+          </div>
+          <div class="card-copy">
+            <span>SMC Concert 2022</span>
+            <h3>I Will Never Love Again</h3>
+            <p>A dramatic ballad performance centered on vocal intensity.</p>
+          </div>
+        </a>
 
-          <li style="padding-top: 10px; position: relative; top: 20px !important;">
-            <a href=" https://youtu.be/fUPHn0KbtuY" data-sr-id="4" style="
-                  visibility: visible;
-                  -webkit-transform: translateY(0) scale(1);
-                  opacity: 1;
-                  transform: translateY(0) scale(1);
-                  opacity: 1;
-                  -webkit-transition:
-                    -webkit-transform 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s,
-                    opacity 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-                  transition:
-                    transform 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s,
-                    opacity 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-                ">
-              <div class="video-wrapper">
-                <img src="./img/4.jpg" alt="Aqua Pineapple" />
-                <!-- Replace the source with your video URL -->
-                <video src="./img/4.mov" autoplay muted loop></video>
-                <!-- Or replace with a GIF URL -->
-                <!-- <img src="your-gif-url.gif" class="gif" alt="GIF"/> -->
-                <div class="overlay">
-                  <span>VIEW PROJECT</span>
-                </div>
-              </div>
-              <span class="h2"></span>
-              <h3> Valerie | SMC Concert 2023</h3>
-            </a>
-          </li>
+        <a class="performance-card" href="https://youtu.be/fUPHn0KbtuY" target="_blank" rel="noopener">
+          <div class="media-frame">
+            <img src="./img/4.jpg" alt="Valerie performance">
+            <video src="./img/4.mov" muted loop playsinline preload="none"></video>
+          </div>
+          <div class="card-copy">
+            <span>SMC Concert 2023</span>
+            <h3>Valerie</h3>
+            <p>A playful, rhythmic performance with the SMC concert ensemble.</p>
+          </div>
+        </a>
 
-          <li style="padding-top: 10px; position: relative; top: 20px !important;">
-            <a href="https://www.youtube.com/watch?v=w-2vFbLwuVw&list=PLIT5TPmY3gWyFGI_9YPk5UHeb27zo0UyS&index=3" data-sr-id=" 4" style="
-            visibility: visible;
-            -webkit-transform: translateY(0) scale(1);
-            opacity: 1;
-            transform: translateY(0) scale(1);
-            opacity: 1;
-            -webkit-transition:
-              -webkit-transform 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s,
-              opacity 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-            transition:
-              transform 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s,
-              opacity 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-          ">
-              <div class="video-wrapper">
-                <img src="./img/6.jpg" alt="Aqua Pineapple" />
-                <!-- Replace the source with your video URL -->
-                <video src="./img/6.mp4" autoplay muted loop></video>
-                <!-- Or replace with a GIF URL -->
-                <!-- <img src="your-gif-url.gif" class="gif" alt="GIF"/> -->
-                <div class="overlay">
-                  <span>VIEW PROJECT</span>
-                </div>
-              </div>
-              <span class="h2"></span>
-              <h3> Vocal Ensemble | 30th MILESTONES 2024</h3>
-            </a>
-          </li>
-          <li>
-            <span class="h2">
-              <h2 style="padding-left: 15px;">Presentation</h2>
-            </span>
-            <a href="https://youtu.be/5dhDzMNkP0U" data-sr-id="1" style="
-				          visibility: visible;
-				          -webkit-transform: translateY(0) scale(1);
-				          opacity: 1;
-				          transform: translateY(0) scale(1);
-				          opacity: 1;
-				          -webkit-transition:
-				            -webkit-transform 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s,
-				            opacity 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-				          transition:
-				            transform 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s,
-				            opacity 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-				        ">
-              <div class="video-wrapper">
-                <img src="./img/5.jpg" alt="Red Pineapple" />
-                <!-- Replace the source with your video URL -->
-                <video src="./img/5.mov" autoplay muted loop></video>
-                <!-- Or replace with a GIF URL -->
-                <!-- <img src="your-gif-url.gif" class="gif" alt="GIF"/> -->
-                <div class="overlay">
-                  <span>VIEW PROJECT</span>
-                </div>
-              </div>
-              <h3 style="line-height: 1.5;">Beach | SMC Concert 2023, <a class="smc_2023_demo" ,
-                  href="https://danny-nus.github.io/SinTechSVS/">
-                  SinTechSVS Demo
-                </a></h3>
-            </a>
-          </li>
-        </ul>
+        <a class="performance-card" href="https://www.youtube.com/watch?v=w-2vFbLwuVw&list=PLIT5TPmY3gWyFGI_9YPk5UHeb27zo0UyS&index=3" target="_blank" rel="noopener">
+          <div class="media-frame">
+            <img src="./img/6.jpg" alt="Vocal Ensemble performance">
+            <video src="./img/6.mp4" muted loop playsinline preload="none"></video>
+          </div>
+          <div class="card-copy">
+            <span>30th Milestones 2024</span>
+            <h3>Vocal Ensemble</h3>
+            <p>Ensemble singing in a larger celebratory concert setting.</p>
+          </div>
+        </a>
+
+        <a class="performance-card" href="https://youtu.be/5dhDzMNkP0U" target="_blank" rel="noopener">
+          <div class="media-frame">
+            <img src="./img/5.jpg" alt="Beach presentation performance">
+            <video src="./img/5.mov" muted loop playsinline preload="none"></video>
+          </div>
+          <div class="card-copy">
+            <span>SMC Concert 2023 / SinTechSVS</span>
+            <h3>Beach</h3>
+            <p>Presentation and performance connected to singing voice synthesis research.</p>
+          </div>
+        </a>
       </div>
     </section>
 
-    <section class="projects">
-      <div class="container">
-        <h2>Song Covers</h2>
-        <ul class="projects-list">
-          <li>
-            <a href="https://music.163.com/#/song?id=2047866217" data-sr-id="1" style="
-                 visibility: visible;
-                 -webkit-transform: translateY(0) scale(1);
-                 opacity: 1;
-                 transform: translateY(0) scale(1);
-                 opacity: 1;
-                 -webkit-transition:
-                   -webkit-transform 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s,
-                   opacity 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-                 transition:
-                   transform 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s,
-                   opacity 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-               ">
-              <div class="img-wrapper">
-                <img src="./img/byebye.jpg" alt="Red Pineapple" />
-              </div>
-              <span class="h2"></span>
-              <h3>Bye Bye (Cover)</h3>
-            </a>
-
-          </li>
-          <li>
-            <a href="https://music.163.com/#/song?id=2024255692" data-sr-id="1" style="
-				      visibility: visible;
-				      -webkit-transform: translateY(0) scale(1);
-				      opacity: 1;
-				      transform: translateY(0) scale(1);
-				      opacity: 1;
-				      -webkit-transition:
-				        -webkit-transform 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s,
-				        opacity 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-				      transition:
-				        transform 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s,
-				        opacity 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-				    ">
-              <div class="img-wrapper">
-                <img src="./img/letitflow.jpg" alt="Red Pineapple" />
-              </div>
-              <span class="h2"></span>
-              <h3>Let It Flow (Cover)</h3>
-            </a>
-            </a>
-          </li>
-
-        </ul>
+    <section id="recordings" class="reveal">
+      <div class="section-head">
+        <h2>Recordings</h2>
+        <p>Selected covers and a small custom player for listening inside the page.</p>
       </div>
-    </section>
-    <section class="audio_player">
-      <div class="container-audio">
-        <h1 class="audio-title"><span style="color: #8a7ecd; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); text-decoration: underline;
-            text-decoration-color: #8a7ecd; text-decoration-thickness: 1px;">Chanson's</span> Music Player</h1>
-        <div id="app-cover">
-          <div id="player">
-            <div id="player-track">
-              <div id="album-name"></div>
-              <div id="track-name"></div>
-              <div id="track-time">
-                <div id="current-time"></div>
-                <div id="track-length"></div>
-              </div>
-              <div id="s-area">
-                <div id="ins-time"></div>
-                <div id="s-hover"></div>
-                <div id="seek-bar"></div>
-              </div>
+      <div class="listen-layout">
+        <div class="cover-grid">
+          <a class="cover-card" href="https://music.163.com/#/song?id=2047866217" target="_blank" rel="noopener">
+            <div class="media-frame">
+              <img src="./img/byebye.jpg" alt="Bye Bye cover artwork">
             </div>
-            <div id="player-content">
-              <div id="album-art">
-                <img src="img/byebye.jpg" class="active" id="_1">
-                <img src="img/letitflow.jpg" id="_2">
-                <img src="img/backatone.jpg" id="_3">
-                <div id="buffer-box">Buffering ...</div>
-              </div>
-              <div id="player-controls">
-                <div class="control">
-                  <div class="button" id="play-previous">
-                    <i class="fas fa-backward"></i>
-                  </div>
-                </div>
-                <div class="control">
-                  <div class="button" id="play-pause-button">
-                    <i class="fas fa-play"></i>
-                  </div>
-                </div>
-                <div class="control">
-                  <div class="button" id="play-next">
-                    <i class="fas fa-forward"></i>
-                  </div>
-                </div>
-              </div>
+            <div class="card-copy">
+              <span>Cover</span>
+              <h3>Bye Bye</h3>
+              <p>Released on NetEase Music.</p>
+            </div>
+          </a>
+          <a class="cover-card" href="https://music.163.com/#/song?id=2024255692" target="_blank" rel="noopener">
+            <div class="media-frame">
+              <img src="./img/letitflow.jpg" alt="Let It Flow cover artwork">
+            </div>
+            <div class="card-copy">
+              <span>Cover</span>
+              <h3>Let It Flow</h3>
+              <p>Released on NetEase Music.</p>
+            </div>
+          </a>
+        </div>
+
+        <article class="music-player" aria-label="Music player">
+          <div class="album-disc" id="albumDisc">
+            <img id="albumArt" src="./img/byebye.jpg" alt="Current track artwork">
+          </div>
+          <div class="player-copy">
+            <h3 id="trackTitle">Bye Bye</h3>
+            <p id="trackArtist">Junchuan - Bye Bye</p>
+            <div class="track-meta">
+              <span id="currentTime">00:00</span>
+              <span id="duration">00:00</span>
+            </div>
+            <div class="progress" id="progress" aria-label="Seek track">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="player-controls">
+              <button class="control-button" id="prevTrack" type="button" aria-label="Previous track">←</button>
+              <button class="control-button primary" id="playPause" type="button" aria-label="Play">▶</button>
+              <button class="control-button" id="nextTrack" type="button" aria-label="Next track">→</button>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </section>
-  </main>
-  <footer class="footer">
-    <div class="container">
-      <section class="contact">
+
+    <section id="contact" class="reveal">
+      <div class="section-head">
         <h2>Contact</h2>
-        <a title="pineapple@example.com" href="#" style="font-weight: bold;">junchuan@comp.nus.edu.sg</a>
-      </section>
-      <section class="follow">
-        <h2>Follow</h2>
-        <ul>
-          <li>
-            <a title="LinkedIn" href="https://www.linkedin.com/in/junchuan-zhao-6367951a5/" target="_blank"
-              style="font-weight: bold;">LinkedIn</a>
-          </li>
-          <li>
-            <a title="Twitter" href="https://x.com/Junchuanzhao_" target="_blank" style="font-weight: bold;">Twitter</a>
-          </li>
-          <li>
-            <a title="Instagram"
-              href="https://www.instagram.com/danny00_nus/?igsh=MTdtcWk4ZXRsbmxmdQ%3D%3D&utm_source=qr" target="_blank"
-              style="font-weight: bold;">Github</a>
-          </li>
-          <li>
-            <a title="Wechat" href="./img/wx.jpg" target="_blank" style="font-weight: bold;">Wechat</a>
-          </li>
-        </ul>
-      </section>
-    </div>
+        <p>For performance, collaboration, music, and research conversations.</p>
+      </div>
+      <article class="contact-card">
+        <div class="contact-block">
+          <span>Email</span>
+          <a href="mailto:junchuan@u.nus.edu">junchuan@u.nus.edu</a>
+        </div>
+        <div class="contact-block">
+          <span>Profiles</span>
+          <a href="https://www.linkedin.com/in/junchuan-zhao-6367951a5/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <div class="contact-block">
+          <span>Social</span>
+          <button type="button" data-copy="zhaojunchuan-000803">WeChat</button>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>Junchuan Zhao. Music, performance, and expressive audio research.</div>
   </footer>
-  <script src="./style/scrollreveal.min.js"></script>
-  <script src="./style/home.js"></script>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Copied</div>
+
   <script>
-    document.getElementById('show-more').addEventListener('click', function (event) {
-      event.preventDefault();
-      var bioParagraph = document.querySelector('.bio');
-      var fullText = document.querySelector('.full-text');
-      // Toggle visibility with smooth transition
-      if (!fullText.classList.contains('show')) {
-        bioParagraph.style.opacity = '0';
-        setTimeout(function () {
-          bioParagraph.style.display = 'none';
-          fullText.style.display = 'block';
-          setTimeout(function () {
-            fullText.classList.add('show');
-          }, 10); // Small delay to trigger transition
-        }, 500); // Match with the CSS transition duration
-        this.textContent = 'HIDE'; // Change button text to 'HIDE'
+    const bioCopy = document.getElementById("bioCopy");
+    const bioToggle = document.getElementById("bioToggle");
+    const toast = document.getElementById("toast");
+
+    bioToggle.addEventListener("click", () => {
+      const expanded = bioCopy.classList.toggle("expanded");
+      bioToggle.textContent = expanded ? "Show Less" : "Read More";
+    });
+
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add("show");
+      window.setTimeout(() => toast.classList.remove("show"), 1400);
+    }
+
+    async function copyText(text) {
+      try {
+        await navigator.clipboard.writeText(text);
+        return true;
+      } catch {
+        const textarea = document.createElement("textarea");
+        textarea.value = text;
+        textarea.setAttribute("readonly", "");
+        textarea.style.position = "fixed";
+        textarea.style.left = "-9999px";
+        document.body.appendChild(textarea);
+        textarea.select();
+        const copied = document.execCommand("copy");
+        textarea.remove();
+        return copied;
+      }
+    }
+
+    document.querySelectorAll("[data-copy]").forEach((button) => {
+      button.addEventListener("click", async () => {
+        const text = button.dataset.copy;
+        const copied = await copyText(text);
+        showToast(copied ? "WeChat copied" : text);
+      });
+    });
+
+    document.querySelectorAll(".performance-card video").forEach((video) => {
+      const card = video.closest(".performance-card");
+      card.addEventListener("mouseenter", () => video.play().catch(() => {}));
+      card.addEventListener("mouseleave", () => {
+        video.pause();
+        video.currentTime = 0;
+      });
+    });
+
+    const tracks = [
+      {
+        title: "Bye Bye",
+        artist: "Junchuan - Bye Bye",
+        src: "img/chanson - Bye Bye (Cover).mp3",
+        art: "img/byebye.jpg"
+      },
+      {
+        title: "Let It Flow",
+        artist: "Junchuan - Let It Flow",
+        src: "img/chanson - Let it flow (cover).mp3",
+        art: "img/letitflow.jpg"
+      },
+      {
+        title: "Back At One",
+        artist: "Junchuan - Back At One",
+        src: "img/backatone.mp3",
+        art: "img/backatone.jpg"
+      }
+    ];
+
+    const audio = new Audio();
+    const albumDisc = document.getElementById("albumDisc");
+    const albumArt = document.getElementById("albumArt");
+    const trackTitle = document.getElementById("trackTitle");
+    const trackArtist = document.getElementById("trackArtist");
+    const playPause = document.getElementById("playPause");
+    const prevTrack = document.getElementById("prevTrack");
+    const nextTrack = document.getElementById("nextTrack");
+    const currentTime = document.getElementById("currentTime");
+    const duration = document.getElementById("duration");
+    const progress = document.getElementById("progress");
+    const progressFill = document.getElementById("progressFill");
+    let trackIndex = 0;
+    let audioLoaded = false;
+
+    function formatTime(value) {
+      if (!Number.isFinite(value)) return "00:00";
+      const minutes = Math.floor(value / 60).toString().padStart(2, "0");
+      const seconds = Math.floor(value % 60).toString().padStart(2, "0");
+      return `${minutes}:${seconds}`;
+    }
+
+    function loadTrack(index) {
+      const track = tracks[index];
+      albumArt.src = track.art;
+      albumArt.alt = `${track.title} artwork`;
+      trackTitle.textContent = track.title;
+      trackArtist.textContent = track.artist;
+      currentTime.textContent = "00:00";
+      duration.textContent = "00:00";
+      progressFill.style.width = "0%";
+      audioLoaded = false;
+      audio.removeAttribute("src");
+      audio.load();
+    }
+
+    function ensureAudioLoaded() {
+      if (audioLoaded) return;
+      audio.src = tracks[trackIndex].src;
+      audio.load();
+      audioLoaded = true;
+    }
+
+    function setPlaying(playing) {
+      playPause.textContent = playing ? "Ⅱ" : "▶";
+      playPause.setAttribute("aria-label", playing ? "Pause" : "Play");
+      albumDisc.classList.toggle("playing", playing);
+    }
+
+    function togglePlay() {
+      if (audio.paused) {
+        ensureAudioLoaded();
+        audio.play().then(() => setPlaying(true)).catch(() => {});
       } else {
-        fullText.classList.remove('show');
-        setTimeout(function () {
-          fullText.style.display = 'none';
-          bioParagraph.style.display = 'block';
-          setTimeout(function () {
-            bioParagraph.style.opacity = '1';
-          }, 10); // Small delay to trigger transition
-        }, 500); // Match with the CSS transition duration
-        this.textContent = 'MORE'; // Change button text back to 'MORE'
+        audio.pause();
+        setPlaying(false);
       }
+    }
+
+    function moveTrack(step) {
+      trackIndex = (trackIndex + step + tracks.length) % tracks.length;
+      const shouldPlay = !audio.paused;
+      loadTrack(trackIndex);
+      if (shouldPlay) {
+        ensureAudioLoaded();
+        audio.play().then(() => setPlaying(true)).catch(() => {});
+      }
+    }
+
+    playPause.addEventListener("click", togglePlay);
+    prevTrack.addEventListener("click", () => moveTrack(-1));
+    nextTrack.addEventListener("click", () => moveTrack(1));
+
+    audio.addEventListener("loadedmetadata", () => {
+      duration.textContent = formatTime(audio.duration);
     });
-  </script>
-  <script>
-    document.getElementById('flowerButton').addEventListener('click', function () {
-      window.location.href = 'https://danny-nus.github.io/';
+
+    audio.addEventListener("timeupdate", () => {
+      currentTime.textContent = formatTime(audio.currentTime);
+      const pct = audio.duration ? (audio.currentTime / audio.duration) * 100 : 0;
+      progressFill.style.width = `${pct}%`;
     });
-  </script>
-  <script>
-    window.addEventListener('scroll', function () {
-      var nav = document.getElementById('fixed-nav');
-      if (window.scrollY > 0) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
+
+    audio.addEventListener("ended", () => moveTrack(1));
+    audio.addEventListener("pause", () => setPlaying(false));
+    audio.addEventListener("play", () => setPlaying(true));
+
+    progress.addEventListener("click", (event) => {
+      if (!audio.duration) return;
+      const rect = progress.getBoundingClientRect();
+      const pct = (event.clientX - rect.left) / rect.width;
+      audio.currentTime = Math.max(0, Math.min(audio.duration, audio.duration * pct));
     });
+
+    loadTrack(trackIndex);
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add("in-view");
+      });
+    }, { threshold: .12 });
+
+    document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
   </script>
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    $(function () {
-      var playerTrack = $("#player-track"),
-        albumName = $("#album-name"),
-        trackName = $("#track-name"),
-        albumArt = $("#album-art"),
-        sArea = $("#s-area"),
-        seekBar = $("#seek-bar"),
-        trackTime = $("#track-time"),
-        insTime = $("#ins-time"),
-        sHover = $("#s-hover"),
-        playPauseButton = $("#play-pause-button"),
-        i = playPauseButton.find("i"),
-        tProgress = $("#current-time"),
-        tTime = $("#track-length"),
-        seekT, seekLoc, seekBarPos, cM, ctMinutes, ctSeconds, curMinutes, curSeconds,
-        durMinutes, durSeconds, playProgress, bTime, nTime = 0, buffInterval = null,
-        tFlag = false,
-        albums = ["Bye Bye", "Let It Flow", "Back At One"],
-        trackNames = ["Junchuan - Bye Bye", "Junchuan - Let It Flow", "Junchuan - Back At One"],
-        albumArtworks = ["_1", "_2", "_3"],
-        backgroundColors = ['#f5f5f5', '#f0f5fa', '#F5EBD8'],
-        trackUrl = ["img/chanson - Bye Bye (Cover).mp3", "img/chanson - Let it flow (cover).mp3", "img/backatone.mp3"],
-        playPreviousTrackButton = $("#play-previous"),
-        playNextTrackButton = $("#play-next"),
-        currIndex = -1,
-        audio = new Audio();  // 确保 audio 对象已初始化
-
-
-      function playPause() {
-        setTimeout(function () {
-          if (audio.paused) {
-            console.log("Playing audio");
-            playerTrack.addClass("active");
-            albumArt.addClass("active");
-            checkBuffering();
-            i.attr("class", "fas fa-pause");
-            audio.play();
-          } else {
-            console.log("Pausing audio");
-            playerTrack.removeClass("active");
-            albumArt.removeClass("active");
-            clearInterval(buffInterval);
-            albumArt.removeClass("buffering");
-            i.attr("class", "fas fa-play");
-            audio.pause();
-          }
-        }, 300);
-      }
-
-      function showHover(event) {
-        seekBarPos = sArea.offset();
-        seekT = event.clientX - seekBarPos.left;
-        seekLoc = audio.duration * (seekT / sArea.outerWidth());
-
-        sHover.width(seekT);
-
-        cM = seekLoc / 60;
-
-        ctMinutes = Math.floor(cM);
-        ctSeconds = Math.floor(seekLoc - ctMinutes * 60);
-
-        if (ctMinutes < 0 || ctSeconds < 0) return;
-
-        if (ctMinutes < 0 || ctSeconds < 0) return;
-
-        if (ctMinutes < 10) ctMinutes = "0" + ctMinutes;
-        if (ctSeconds < 10) ctSeconds = "0" + ctSeconds;
-
-        if (isNaN(ctMinutes) || isNaN(ctSeconds)) insTime.text("--:--");
-        else insTime.text(ctMinutes + ":" + ctSeconds);
-
-        insTime.css({ left: seekT, "margin-left": "-21px" }).fadeIn(0);
-      }
-
-      function hideHover() {
-        sHover.width(0);
-        insTime.text("00:00").css({ left: "0px", "margin-left": "0px" }).fadeOut(0);
-      }
-
-      function playFromClickedPos() {
-        audio.currentTime = seekLoc;
-        seekBar.width(seekT);
-        hideHover();
-      }
-
-      function updateCurrTime() {
-        nTime = new Date();
-        nTime = nTime.getTime();
-
-        if (!tFlag) {
-          tFlag = true;
-          trackTime.addClass("active");
-        }
-
-        curMinutes = Math.floor(audio.currentTime / 60);
-        curSeconds = Math.floor(audio.currentTime - curMinutes * 60);
-
-        durMinutes = Math.floor(audio.duration / 60);
-        durSeconds = Math.floor(audio.duration - durMinutes * 60);
-
-        playProgress = (audio.currentTime / audio.duration) * 100;
-
-        if (curMinutes < 10) curMinutes = "0" + curMinutes;
-        if (curSeconds < 10) curSeconds = "0" + curSeconds;
-
-        if (durMinutes < 10) durMinutes = "0" + durMinutes;
-        if (durSeconds < 10) durSeconds = "0" + durSeconds;
-
-        if (isNaN(curMinutes) || isNaN(curSeconds)) tProgress.text("00:00");
-        else tProgress.text(curMinutes + ":" + curSeconds);
-
-        if (isNaN(durMinutes) || isNaN(durSeconds)) tTime.text("00:00");
-        else tTime.text(durMinutes + ":" + durSeconds);
-
-        if (isNaN(curMinutes) || isNaN(curSeconds) || isNaN(durMinutes) || isNaN(durSeconds))
-          trackTime.removeClass("active");
-        else trackTime.addClass("active");
-
-        seekBar.width(playProgress + "%");
-
-        if (playProgress == 100) {
-          i.attr("class", "fas fa-play");
-          seekBar.width(0);
-          tProgress.text("00:00");
-          albumArt.removeClass("buffering").removeClass("active");
-          clearInterval(buffInterval);
-        }
-      }
-
-      function checkBuffering() {
-        clearInterval(buffInterval);
-        buffInterval = setInterval(function () {
-          if (nTime == 0 || bTime - nTime > 1000) albumArt.addClass("buffering");
-          else albumArt.removeClass("buffering");
-
-          bTime = new Date();
-          bTime = bTime.getTime();
-        }, 100);
-      }
-
-      function selectTrack(flag) {
-        if (flag == 0 || flag == 1) ++currIndex;
-        else --currIndex;
-
-        if (currIndex > -1 && currIndex < albumArtworks.length) {
-          if (flag == 0) i.attr("class", "fas fa-play");
-          else {
-            albumArt.removeClass("buffering");
-            i.attr("class", "fas fa-pause");
-          }
-
-          seekBar.width(0);
-          trackTime.removeClass("active");
-          tProgress.text("00:00");
-          tTime.text("00:00");
-
-          currAlbum = albums[currIndex];
-          currTrackName = trackNames[currIndex];
-          currArtwork = albumArtworks[currIndex];
-
-          console.log("Loading track: " + currTrackName);
-
-          audio.src = trackUrl[currIndex];
-
-          nTime = 0;
-          bTime = new Date();
-          bTime = bTime.getTime();
-
-          if (flag != 0) {
-            audio.play();
-            playerTrack.addClass("active");
-            albumArt.addClass("active");
-
-            clearInterval(buffInterval);
-            checkBuffering();
-          }
-
-          albumName.text(currAlbum);
-          trackName.text(currTrackName);
-          albumArt.find("img.active").removeClass("active");
-          $("#" + currArtwork).addClass("active");
-
-          // Update background color based on currIndex
-          playerTrack.css('background-color', backgroundColors[currIndex]);
-        } else {
-          if (flag == 0 || flag == 1) --currIndex;
-          else ++currIndex;
-        }
-      }
-
-      function initPlayer() {
-        console.log("Initializing player");
-
-        selectTrack(0);
-
-        audio.loop = false;
-
-        playPauseButton.on("click", playPause);
-
-        sArea.mousemove(function (event) {
-          showHover(event);
-        });
-
-        sArea.mouseout(hideHover);
-
-        sArea.on("click", playFromClickedPos);
-
-        $(audio).on("timeupdate", updateCurrTime);
-
-        playPreviousTrackButton.on("click", function () {
-          selectTrack(-1);
-        });
-        playNextTrackButton.on("click", function () {
-          selectTrack(1);
-        });
-      }
-
-      initPlayer();
-    });
-  </script>
-
 </body>
-
 </html>
